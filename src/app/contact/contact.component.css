@@ -1,0 +1,27 @@
+.background-image-container {
+    position: relative;
+    height: 50vh;
+    background-image: url('https://siennacharles.com/_nuxt/img/hero.4191e65.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Add a pseudo-element for the dark overlay */
+.background-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust the RGBA values to change darkness level */
+    mix-blend-mode: multiply; /* Ensure overlay only darkens the background */
+    z-index: 0; /* Ensure the overlay is behind the content */
+}
+
+/* Ensure the content is above the overlay */
+.background-image-container > * {
+    position: relative;
+    z-index: 1;
+}
