@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
   imports: [CommonModule, RouterOutlet, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+ 
 })
 export class AppComponent {
   title = 'Sydney Boat Rentals';

@@ -15,13 +15,57 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Adjust the RGBA values to change darkness level */
-    mix-blend-mode: multiply; /* Ensure overlay only darkens the background */
-    z-index: 0; /* Ensure the overlay is behind the content */
+    background: rgba(0, 0, 0, 0.1);
+    /* Adjust the RGBA values to change darkness level */
+    mix-blend-mode: multiply;
+    /* Ensure overlay only darkens the background */
+    z-index: 0;
+    /* Ensure the overlay is behind the content */
 }
 
 /* Ensure the content is above the overlay */
-.background-image-container > * {
+.background-image-container>* {
     position: relative;
     z-index: 1;
+}
+
+/* swiper-container {
+        width: 100%;
+
+    } */
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
 }
