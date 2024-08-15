@@ -1,57 +1,87 @@
 <div class="background-image-container flex justify-center items-center">
     <div class="container text-center flex flex-col justify-center">
-        <h1 class="font-bold text-white text-6xl pb-2">Sydney's Most <br>Comprehensive Boat Hire</h1>
-        <p class="text-white text-3sm italic pb-4">Easy Affordable Boat Hire Tailored To Suit Your Exact Needs</p>
+        <h1 class="font-bold text-white text-4xl sm:text-5xl md:text-6xl pb-2">
+            Sydney's Most <br>Comprehensive Boat Hire
+        </h1>
+        <h2 class="text-white text-base sm:text-lg md:text-xl italic pb-4">
+            Easy Affordable Boat Hire Tailored To Suit Your Exact Needs
+        </h2>
         <div class="flex justify-center items-center mt-1">
             <div class="flex flex-wrap mb-5">
                 <div class="px-2">
-                    <div class="relative inline-block text-left">
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            type="button">Dropdown button <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
+                    <button id="selectBoat" data-dropdown-toggle="selectBoatOptions"
+                        class="bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
+                        type="button">Where is your event? <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
 
-                        <!-- Dropdown menu -->
-                        <div id="dropdown"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                aria-labelledby="dropdownDefaultButton">
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                        out</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div id="selectBoatOptions"
+                        class="z-10 hidden bg-white divide-y divide-gray-100  shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="selectBoat">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Wedding</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Corporate
+                                    Event</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Birthday
+                                    Parties</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Vivid
+                                    Sydney</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Australia
+                                    Day
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-                <div class="px-2">
-                    <select class="form-select">
-                        <option value="" disabled selected>Select Guest</option>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                </div>
-                <div class="px-2">
-                    <button class="btn btn-primary">Find My Boat</button>
+
+                    <button id="selectGuests" data-dropdown-toggle="selectGuestOptions"
+                        class="ml-2 bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center"
+                        type="button">How many guests? <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
+
+                    <div id="selectGuestOptions"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="selectGuests">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Up
+                                    to 35 Guests</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">36-70
+                                    Guests</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">More
+                                    than 71 Guests</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button"
+                        class="ml-2 text-white bg-yellow-400 hover:bg-yellow-500  focus:ring-4 font-medium  text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">Find
+                        My Boat</button>
                 </div>
             </div>
         </div>
@@ -64,70 +94,82 @@
             you</h2>
         <h1 class="text-4xl font-medium bold title-font text-gray-900 mb-12 uppercase">Events / Occassions
         </h1>
-        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="4"
-            space-between="30">
+        <swiper-container class="mySwiper" slides-per-view="4" space-between="30">
             <swiper-slide>
                 <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
+                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-all duration-500">
+                    <div class="relative">
                         <img src="https://media.istockphoto.com/id/912920224/photo/just-married-couple-on-yacht-happy-bride-and-groom-on-their-wedding-day.jpg?s=612x612&w=0&k=20&c=2Z4O57Wi1HH1Jhg5X11L3nkVP2HXzovG3atkQGysQLo="
-                            alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Wedding</h4>
+                            alt="Card image" class="block w-full" />
+                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
+                            <h1 class="text-3xl font-semibold text-white capitalize">Wedding</h1>
+                        </div>
                     </div>
                 </div>
             </swiper-slide>
             <swiper-slide>
                 <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
+                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-all duration-500">
+                    <div class="relative">
                         <img src="https://dubriani.com/wp-content/uploads/2020/08/Yacht-Solandge-Party-Time.jpeg"
-                            alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Private Party</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlva7lLbc_p4eK7uEuKMJbne0de3exDtipsg&s"
-                            class="w-full h-auto object-cover" alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Birthday Party</h4>
+                            alt="Card image" class="block w-full" />
+                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
+                            <h1 class="text-3xl font-semibold text-white capitalize">Private Party</h1>
+                        </div>
                     </div>
                 </div>
             </swiper-slide>
             <swiper-slide>
                 <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
+                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-all duration-500">
+                    <div class="relative">
+                        <img src="https://dubaiboatcatering.com/wp-content/uploads/2023/06/Finger-Food-6-scaled.jpg"
+                            alt="Card image" class="block w-full" />
+                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
+                            <h1 class="text-3xl font-semibold text-white capitalize">Birthday Party</h1>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div
+                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-all duration-500">
+                    <div class="relative">
                         <img src="https://media.licdn.com/dms/image/D4D12AQHppglJrTuz-g/article-cover_image-shrink_720_1280/0/1685971021689?e=2147483647&v=beta&t=48hkfSsIyL3TeUGPZ8zrS4-AQCXp-SYGUaEAZwcyu-s"
-                            alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Corporate Party</h4>
+                            alt="Card image" class="block w-full" />
+                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
+                            <h1 class="text-3xl font-semibold text-white capitalize">Corporate Party</h1>
+                        </div>
                     </div>
                 </div>
             </swiper-slide>
+
+            <swiper-slide>
+                <div
+                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-all duration-500">
+                    <div class="relative">
+                        <img src="https://pbs.twimg.com/media/FKG0kXxaUAMD11N.jpg" alt="Card image"
+                            class="block w-full" />
+                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
+                            <h1 class="text-3xl font-semibold text-white capitalize">Gender Reveal</h1>
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+
+
         </swiper-container>
     </div>
 
-    <div class="container px-5 py-20 mx-auto flex flex-wrap">
-        <h2 class="lg:text-4xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">A Local Family Boat
+    <div class="container px-20  py-20 mx-auto flex flex-wrap">
+        <h2 class="px-20 lg:text-4xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">A Local Family Boat
             Rental Business, <br> Started in 2000</h2>
-        <div class="md:w-3/5 md:pl-6">
+        <div class="px-20 md:w-3/5 md:pl-6">
             <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 laudantium amet exercitationem. Voluptatum in quae et natus, saepe tempora officia totam iure, eligendi
-                voluptatibus cumque vitae modi a animi corporis!</p>
+                voluptatibus cumque vitae modi a animi corporis! Lorem ipsum dolor sit, amet consectetur adipisicing
+                elit. Maxime debitis, iusto earum maiores optio quo numquam provident nulla eveniet quibusdam, quisquam
+                nihil molestias est recusandae unde repellat nobis inventore eum.</p>
             <div class="flex md:mt-4 mt-6">
                 <a class="text-indigo-500 inline-flex items-center ml-4">Learn More
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -140,78 +182,22 @@
     </div>
 </section>
 
-<section class="text-gray-600 bg-gray-100 body-font">
-    <div class="container px-5 py-24 mx-auto">
+<section class="text-gray-600 bg-gradient-to-r from-gray-200 via-purple-300 to-gray-200  body-font">
+    <div class="container px-5 py-20 mx-auto">
         <div class="flex flex-col text-center w-full mb-10">
             <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Plan your trips
             </h2>
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Holiday Celebrations
-            </h1>
+            <h1 class="text-4xl font-medium title-font mb-4 bold text-gray-900">Holiday Celebrations</h1>
         </div>
-        <swiper-container class="mySwiper" slides-per-view="4" space-between="30">
-            <swiper-slide>
-                <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
-                        <img src="https://media.istockphoto.com/id/912920224/photo/just-married-couple-on-yacht-happy-bride-and-groom-on-their-wedding-day.jpg?s=612x612&w=0&k=20&c=2Z4O57Wi1HH1Jhg5X11L3nkVP2HXzovG3atkQGysQLo="
-                            alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Wedding</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
-                        <img src="https://dubriani.com/wp-content/uploads/2020/08/Yacht-Solandge-Party-Time.jpeg"
-                            alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Private Party</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlva7lLbc_p4eK7uEuKMJbne0de3exDtipsg&s"
-                            class="w-full h-auto object-cover" alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Birthday Party</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-            <swiper-slide>
-                <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
-                        <img src="https://media.licdn.com/dms/image/D4D12AQHppglJrTuz-g/article-cover_image-shrink_720_1280/0/1685971021689?e=2147483647&v=beta&t=48hkfSsIyL3TeUGPZ8zrS4-AQCXp-SYGUaEAZwcyu-s"
-                            alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Corporate Party</h4>
-                    </div>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <div
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl transition-all duration-500 ">
-                    <div class="block overflow-hidden">
-                        <img src="https://dubriani.com/wp-content/uploads/2020/08/Yacht-Solandge-Party-Time.jpeg"
-                            alt="Card image" />
-                    </div>
-                    <div class="p-4">
-                        <h4 class="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500 ">
-                            Private Party</h4>
+        <swiper-container class="mySwiper" slides-per-view="5" space-between="30">
+            <swiper-slide *ngFor="let holiday of holidays; let i = index">
+                <div [ngClass]="{'mt-10': i % 2 === 0, 'mb-10': i % 2 !== 0}"
+                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-all duration-500">
+                    <div class="relative">
+                        <img [src]="holiday.imageUrl" alt="Holiday image" class="block w-full" />
+                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
+                            <h1 class="text-3xl font-semibold text-white capitalize">{{ holiday.title }}</h1>
+                        </div>
                     </div>
                 </div>
             </swiper-slide>
