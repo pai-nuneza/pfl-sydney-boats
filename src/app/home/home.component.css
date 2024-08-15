@@ -4,7 +4,7 @@
     background-image: url('https://images.unsplash.com/photo-1523496922380-91d5afba98a3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8eWFjaHR8ZW58MHx8MHx8fDA%3D');
     background-size: cover;
     background-repeat: no-repeat;
-    animation: move-background 50s linear infinite alternate;/
+    animation: move-background 50s linear infinite alternate;
 }
 
 @keyframes move-background {
@@ -54,10 +54,6 @@
     z-index: 1;
 }
 
-/* swiper-container {
-        width: 100%;
-
-    } */
 
 html,
 body {

@@ -38,7 +38,5 @@ export class HomeComponent {
       title: 'Christmas Day',
     },
   ];
-
-
   
 }
