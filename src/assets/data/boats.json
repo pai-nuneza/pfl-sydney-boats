@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "MV Enigma X",
+    "price": 480,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrrPHX2YdCDXyXM-egz6zB6tWemgHir0sNg&s",
+    "maxGuests": 85,
+    "boatType": "Power boats",
+    "features": ["Wi-fi", "Air Conditioning", "Sound system"],
+    "catering": ["BYO allowed", "BBQ"],
+    "shortDescription": "A sleek powerboat perfect for cruising Sydney Harbour, accommodating up to 85 guests with luxurious amenities.",
+    "longDescription": "The MV Enigma X offers a top-tier experience on the water, featuring modern amenities like Wi-Fi, air conditioning, and a high-quality sound system. Perfect for events and gatherings, this powerboat allows guests to enjoy the Sydney Harbour in comfort, with catering options like BBQs and BYO available."
+  },
+  {
+    "id": 2,
+    "name": "Aqua Bay",
+    "price": 520,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Oe8oB88prjE-sOhO2P3n9vg9t_HRBpdVZQ&s",
+    "maxGuests": 90,
+    "boatType": "Pontoon",
+    "features": ["Bluetooth", "Swimming"],
+    "catering": ["Catering & Drink available"],
+    "shortDescription": "A stylish pontoon boat designed for larger groups, with space for 90 guests and unique features for water-based fun.",
+    "longDescription": "Aqua Bay provides a luxurious way to explore Sydney Harbour, with Bluetooth connectivity and swimming access for those who want to dive into the water. This pontoon is ideal for social events, offering both catering and drinks onboard to enhance your experience on the water."
+  },
+  {
+    "id": 3,
+    "name": "MV Privacy",
+    "price": 450,
+    "imageUrl": "https://mvluxuryyachts.com.au/wp-content/uploads/2020/11/MV-Privacy-MV-Luxury-Yacht-Charters-Sydney-Harbour-Exterior-1.jpg",
+    "maxGuests": 75,
+    "boatType": "Catamaran",
+    "features": ["Wi-fi", "DJ allowed"],
+    "catering": ["Licensed bar"],
+    "shortDescription": "A sophisticated catamaran that combines elegance and comfort, ideal for intimate gatherings of up to 75 guests.",
+    "longDescription": "MV Privacy is the perfect vessel for those seeking a private and refined experience on Sydney Harbour. With Wi-Fi, the option for a DJ, and a licensed bar on board, this catamaran offers a premium setting for parties, celebrations, or corporate events, all while enjoying the stunning views of the harbour."
+  },
+  {
+    "id": 4,
+    "name": "Ghost II",
+    "price": 600,
+    "imageUrl": "https://www.sydneyharbourexclusive.com/wp-content/uploads/2017/09/Ghost-2-sydney-harbour-FI.jpg",
+    "maxGuests": 100,
+    "boatType": "Sailing",
+    "features": ["Wi-fi", "Air Conditioning", "Swimming", "Sound system"],
+    "catering": ["BBQ", "Catering & Drink available"],
+    "shortDescription": "A luxurious sailing yacht with high-end amenities, accommodating up to 100 guests for an unforgettable cruise.",
+    "longDescription": "Ghost II stands out as one of the most luxurious sailing yachts available for hire on Sydney Harbour. Offering amenities such as Wi-Fi, air conditioning, and a sound system, it caters to all types of events. With catering options available, including BBQs and drinks, this yacht ensures a memorable experience for all aboard."
+  },
+  {
+    "id": 5,
+    "name": "Pisces",
+    "price": 480,
+    "imageUrl": "https://majoryachtservices.com.au/wp-content/uploads/2017/04/Pisces-1N.jpg",
+    "maxGuests": 85,
+    "boatType": "Fishing boats",
+    "features": ["Bluetooth", "Sound system"],
+    "catering": ["BYO allowed"],
+    "shortDescription": "A well-equipped fishing boat with modern amenities, perfect for a day out with up to 85 guests.",
+    "longDescription": "Pisces offers a unique fishing experience on Sydney Harbour, combining the thrill of fishing with modern conveniences like Bluetooth and a sound system. This boat is perfect for fishing enthusiasts or casual adventurers looking for a relaxing day on the water, with BYO catering options available."
+  },
+  {
+    "id": 6,
+    "name": "Oscar II",
+    "price": 500,
+    "imageUrl": "https://www.sydneyharbourdays.com/wp-content/uploads/2022/10/Oscar-II-Yacht-Hire-Front-View.jpg",
+    "maxGuests": 80,
+    "boatType": "Luxury Yachts",
+    "features": ["Wi-fi", "Air Conditioning", "Sound system", "DJ allowed"],
+    "catering": ["Licensed bar"],
+    "shortDescription": "A luxurious yacht designed for comfort and style, perfect for up to 80 guests.",
+    "longDescription": "Oscar II is a luxury yacht that combines sleek design with modern amenities, making it perfect for high-end events and gatherings. With Wi-Fi, air conditioning, and a licensed bar on board, this yacht ensures a comfortable and memorable experience for all guests."
+  },
+  {
+    "id": 7,
+    "name": "MV Blue Room",
+    "price": 460,
+    "imageUrl": "https://www.sydneyharbouryachtcharter.com.au/wp-content/uploads/2022/02/Blue_Room_2.PNG.jpg",
+    "maxGuests": 70,
+    "boatType": "Power boats",
+    "features": ["Wi-fi", "Bluetooth"],
+    "catering": ["BBQ"],
+    "shortDescription": "A modern powerboat with a sleek design and amenities for up to 70 guests.",
+    "longDescription": "MV Blue Room offers a stylish way to explore Sydney Harbour, with a sleek design and modern amenities like Wi-Fi and Bluetooth connectivity. Perfect for intimate gatherings or corporate events, this powerboat provides a comfortable experience with BBQ catering options available."
+  },
+  {
+    "id": 8,
+    "name": "The Jackson",
+    "price": 620,
+    "imageUrl": "https://cms-cdn.travellink.com.au/volumes/thejackson/images/_1200x630_crop_center-center_82_none/SeaLink_Fleet_JezDrake-73.jpg?v=1688685481",
+    "maxGuests": 110,
+    "boatType": "Pontoon",
+    "features": ["Air Conditioning", "Swimming", "DJ allowed"],
+    "catering": ["Catering & Drink available"],
+    "shortDescription": "A premium pontoon boat with space for 110 guests, ideal for large events on Sydney Harbour.",
+    "longDescription": "The Jackson is one of the most spacious pontoon boats available for hire, with room for up to 110 guests. Featuring air conditioning, swimming access, and DJ options, it is perfect for large gatherings, parties, or corporate events. With catering and drinks available, this boat ensures a luxurious experience on the water."
+  },
+  {
+    "id": 9,
+    "name": "Shadow",
+    "price": 580,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 95,
+    "boatType": "Catamaran",
+    "features": ["Wi-fi", "Bluetooth", "Swimming"],
+    "catering": ["BYO allowed", "Licensed bar"],
+    "shortDescription": "A spacious catamaran with top-notch amenities, perfect for up to 95 guests.",
+    "longDescription": "Shadow is a luxurious catamaran that offers the best of both comfort and entertainment on Sydney Harbour. With Wi-Fi, Bluetooth, and swimming access, this boat is ideal for social events or private gatherings. Guests can enjoy BYO options or take advantage of the licensed bar onboard."
+  },
+  {
+    "id": 10,
+    "name": "Infinity Pacific",
+    "price": 430,
+    "imageUrl": "https://www.sydneyboathire.com.au/wp-content/uploads/2019/06/boat-hire-sydney-on-infinity-pacific-56-768x512.jpg",
+    "maxGuests": 60,
+    "boatType": "Sailing",
+    "features": ["Bluetooth", "Sound system"],
+    "catering": ["BBQ", "Licensed bar"],
+    "shortDescription": "A classic sailing yacht with modern amenities, ideal for up to 60 guests.",
+    "longDescription": "Infinity Pacific offers a classic sailing experience with modern touches like Bluetooth and a sound system, making it perfect for relaxed outings or intimate gatherings on Sydney Harbour. With BBQ catering and a licensed bar available, this yacht ensures a comfortable and enjoyable day on the water."
+  }
+]
