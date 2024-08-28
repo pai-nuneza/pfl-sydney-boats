@@ -9,7 +9,8 @@
     "features": ["Wi-fi", "Air Conditioning", "Sound system"],
     "catering": ["BYO allowed", "BBQ"],
     "shortDescription": "A sleek powerboat perfect for cruising Sydney Harbour, accommodating up to 85 guests with luxurious amenities.",
-    "longDescription": "The MV Enigma X offers a top-tier experience on the water, featuring modern amenities like Wi-Fi, air conditioning, and a high-quality sound system. Perfect for events and gatherings, this powerboat allows guests to enjoy the Sydney Harbour in comfort, with catering options like BBQs and BYO available."
+    "longDescription": "The MV Enigma X offers a top-tier experience on the water, featuring modern amenities like Wi-Fi, air conditioning, and a high-quality sound system. Perfect for events and gatherings, this powerboat allows guests to enjoy the Sydney Harbour in comfort, with catering options like BBQs and BYO available.",
+    "events": ["corporate", "birthday", "vivid"]
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "features": ["Bluetooth", "Swimming"],
     "catering": ["Catering & Drink available"],
     "shortDescription": "A stylish pontoon boat designed for larger groups, with space for 90 guests and unique features for water-based fun.",
-    "longDescription": "Aqua Bay provides a luxurious way to explore Sydney Harbour, with Bluetooth connectivity and swimming access for those who want to dive into the water. This pontoon is ideal for social events, offering both catering and drinks onboard to enhance your experience on the water."
+    "longDescription": "Aqua Bay provides a luxurious way to explore Sydney Harbour, with Bluetooth connectivity and swimming access for those who want to dive into the water. This pontoon is ideal for social events, offering both catering and drinks onboard to enhance your experience on the water.",
+    "events": ["birthday", "christmas", "newyear"]
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "features": ["Wi-fi", "DJ allowed"],
     "catering": ["Licensed bar"],
     "shortDescription": "A sophisticated catamaran that combines elegance and comfort, ideal for intimate gatherings of up to 75 guests.",
-    "longDescription": "MV Privacy is the perfect vessel for those seeking a private and refined experience on Sydney Harbour. With Wi-Fi, the option for a DJ, and a licensed bar on board, this catamaran offers a premium setting for parties, celebrations, or corporate events, all while enjoying the stunning views of the harbour."
+    "longDescription": "MV Privacy is the perfect vessel for those seeking a private and refined experience on Sydney Harbour. With Wi-Fi, the option for a DJ, and a licensed bar on board, this catamaran offers a premium setting for parties, celebrations, or corporate events, all while enjoying the stunning views of the harbour.",
+    "events": ["corporate", "wedding", "vivid"]
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "features": ["Wi-fi", "Air Conditioning", "Swimming", "Sound system"],
     "catering": ["BBQ", "Catering & Drink available"],
     "shortDescription": "A luxurious sailing yacht with high-end amenities, accommodating up to 100 guests for an unforgettable cruise.",
-    "longDescription": "Ghost II stands out as one of the most luxurious sailing yachts available for hire on Sydney Harbour. Offering amenities such as Wi-Fi, air conditioning, and a sound system, it caters to all types of events. With catering options available, including BBQs and drinks, this yacht ensures a memorable experience for all aboard."
+    "longDescription": "Ghost II stands out as one of the most luxurious sailing yachts available for hire on Sydney Harbour. Offering amenities such as Wi-Fi, air conditioning, and a sound system, it caters to all types of events. With catering options available, including BBQs and drinks, this yacht ensures a memorable experience for all aboard.",
+    "events": ["wedding", "corporate", "newyear", "christmas"]
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "features": ["Bluetooth", "Sound system"],
     "catering": ["BYO allowed"],
     "shortDescription": "A well-equipped fishing boat with modern amenities, perfect for a day out with up to 85 guests.",
-    "longDescription": "Pisces offers a unique fishing experience on Sydney Harbour, combining the thrill of fishing with modern conveniences like Bluetooth and a sound system. This boat is perfect for fishing enthusiasts or casual adventurers looking for a relaxing day on the water, with BYO catering options available."
+    "longDescription": "Pisces offers a unique fishing experience on Sydney Harbour, combining the thrill of fishing with modern conveniences like Bluetooth and a sound system. This boat is perfect for fishing enthusiasts or casual adventurers looking for a relaxing day on the water, with BYO catering options available.",
+    "events": ["boxing", "birthday"]
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "features": ["Wi-fi", "Air Conditioning", "Sound system", "DJ allowed"],
     "catering": ["Licensed bar"],
     "shortDescription": "A luxurious yacht designed for comfort and style, perfect for up to 80 guests.",
-    "longDescription": "Oscar II is a luxury yacht that combines sleek design with modern amenities, making it perfect for high-end events and gatherings. With Wi-Fi, air conditioning, and a licensed bar on board, this yacht ensures a comfortable and memorable experience for all guests."
+    "longDescription": "Oscar II is a luxury yacht that combines sleek design with modern amenities, making it perfect for high-end events and gatherings. With Wi-Fi, air conditioning, and a licensed bar on board, this yacht ensures a comfortable and memorable experience for all guests.",
+    "events": ["corporate", "wedding", "newyear", "vivid"]
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "features": ["Wi-fi", "Bluetooth"],
     "catering": ["BBQ"],
     "shortDescription": "A modern powerboat with a sleek design and amenities for up to 70 guests.",
-    "longDescription": "MV Blue Room offers a stylish way to explore Sydney Harbour, with a sleek design and modern amenities like Wi-Fi and Bluetooth connectivity. Perfect for intimate gatherings or corporate events, this powerboat provides a comfortable experience with BBQ catering options available."
+    "longDescription": "MV Blue Room offers a stylish way to explore Sydney Harbour, with a sleek design and modern amenities like Wi-Fi and Bluetooth connectivity. Perfect for intimate gatherings or corporate events, this powerboat provides a comfortable experience with BBQ catering options available.",
+    "events": ["birthday", "christmas", "vivid"]
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "features": ["Air Conditioning", "Swimming", "DJ allowed"],
     "catering": ["Catering & Drink available"],
     "shortDescription": "A premium pontoon boat with space for 110 guests, ideal for large events on Sydney Harbour.",
-    "longDescription": "The Jackson is one of the most spacious pontoon boats available for hire, with room for up to 110 guests. Featuring air conditioning, swimming access, and DJ options, it is perfect for large gatherings, parties, or corporate events. With catering and drinks available, this boat ensures a luxurious experience on the water."
+    "longDescription": "The Jackson is one of the most spacious pontoon boats available for hire, with room for up to 110 guests. Featuring air conditioning, swimming access, and DJ options, it is perfect for large gatherings, parties, or corporate events. With catering and drinks available, this boat ensures a luxurious experience on the water.",
+    "events": ["newyear", "corporate", "wedding", "birthday"]
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "features": ["Wi-fi", "Bluetooth", "Swimming"],
     "catering": ["BYO allowed", "Licensed bar"],
     "shortDescription": "A spacious catamaran with top-notch amenities, perfect for up to 95 guests.",
-    "longDescription": "Shadow is a luxurious catamaran that offers the best of both comfort and entertainment on Sydney Harbour. With Wi-Fi, Bluetooth, and swimming access, this boat is ideal for social events or private gatherings. Guests can enjoy BYO options or take advantage of the licensed bar onboard."
+    "longDescription": "Shadow is a luxurious catamaran that offers the best of both comfort and entertainment on Sydney Harbour. With Wi-Fi, Bluetooth, and swimming access, this boat is ideal for social events or private gatherings. Guests can enjoy BYO options or take advantage of the licensed bar onboard.",
+    "events": ["wedding", "corporate", "vivid", "newyear"]
   },
   {
     "id": 10,
@@ -117,6 +126,124 @@
     "features": ["Bluetooth", "Sound system"],
     "catering": ["BBQ", "Licensed bar"],
     "shortDescription": "A classic sailing yacht with modern amenities, ideal for up to 60 guests.",
-    "longDescription": "Infinity Pacific offers a classic sailing experience with modern touches like Bluetooth and a sound system, making it perfect for relaxed outings or intimate gatherings on Sydney Harbour. With BBQ catering and a licensed bar available, this yacht ensures a comfortable and enjoyable day on the water."
+    "longDescription": "Infinity Pacific offers a classic sailing experience with modern touches like Bluetooth and a sound system, making it perfect for relaxed outings or intimate gatherings on Sydney Harbour. With BBQ catering and a licensed bar available, this yacht ensures a comfortable and enjoyable day on the water.",
+    "events": ["birthday", "australiaday", "vivid"]
+  },
+  {
+    "id": 11,
+    "name": "Pacific Jewel",
+    "price": 500,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 90,
+    "boatType": "Luxury Yachts",
+    "features": ["Wi-fi", "Air Conditioning", "DJ allowed"],
+    "catering": ["Licensed bar"],
+    "shortDescription": "A high-end luxury yacht, perfect for up to 90 guests seeking a premium experience on the water.",
+    "longDescription": "The Pacific Jewel offers a luxurious escape on Sydney Harbour, featuring modern amenities like Wi-Fi, air conditioning, and the option for a DJ. Perfect for corporate events or celebrations, this yacht offers a licensed bar and ensures a memorable experience for all guests.",
+    "events": ["corporate", "wedding", "newyear"]
+  },
+  {
+    "id": 12,
+    "name": "Southern Star",
+    "price": 460,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 80,
+    "boatType": "Sailing",
+    "features": ["Bluetooth", "Swimming", "Sound system"],
+    "catering": ["BBQ", "Licensed bar"],
+    "shortDescription": "A stylish sailing yacht that blends traditional charm with modern amenities, perfect for up to 80 guests.",
+    "longDescription": "Southern Star is the ideal sailing yacht for those looking to combine classic sailing experiences with modern conveniences. Whether it's for a corporate event or a social gathering, this yacht offers BBQ catering, a licensed bar, and a sound system for a complete experience.",
+    "events": ["vivid", "birthday", "christmas"]
+  },
+  {
+    "id": 13,
+    "name": "Harbour Dream",
+    "price": 550,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 120,
+    "boatType": "Pontoon",
+    "features": ["Air Conditioning", "Wi-fi", "Swimming"],
+    "catering": ["Catering & Drink available"],
+    "shortDescription": "A spacious pontoon boat designed for large gatherings, accommodating up to 120 guests with comfort.",
+    "longDescription": "Harbour Dream is the ultimate pontoon boat for large-scale events on Sydney Harbour. With features like air conditioning, Wi-Fi, and swimming access, it is perfect for weddings, corporate events, or any celebration. Catering and drink services are available to enhance the experience.",
+    "events": ["wedding", "corporate", "newyear", "birthday"]
+  },
+  {
+    "id": 14,
+    "name": "Ocean Breeze",
+    "price": 490,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 75,
+    "boatType": "Catamaran",
+    "features": ["Wi-fi", "Bluetooth", "DJ allowed"],
+    "catering": ["BYO allowed", "Licensed bar"],
+    "shortDescription": "A versatile catamaran offering a mix of relaxation and entertainment for up to 75 guests.",
+    "longDescription": "Ocean Breeze combines the best of catamaran sailing with entertainment options like Bluetooth connectivity and DJ availability. Whether for a relaxed outing or a lively event, this boat offers flexibility with BYO catering and a licensed bar.",
+    "events": ["corporate", "vivid", "newyear"]
+  },
+  {
+    "id": 15,
+    "name": "Star Voyager",
+    "price": 520,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 85,
+    "boatType": "Power boats",
+    "features": ["Wi-fi", "Sound system", "Air Conditioning"],
+    "catering": ["BBQ", "Catering & Drink available"],
+    "shortDescription": "A high-performance powerboat offering comfort and amenities for up to 85 guests.",
+    "longDescription": "Star Voyager is a modern powerboat designed for events that demand both style and substance. With Wi-Fi, a sound system, and air conditioning, it is ideal for corporate events or social gatherings. Catering and BBQ options are available to complete the experience.",
+    "events": ["corporate", "christmas", "birthday"]
+  },
+  {
+    "id": 16,
+    "name": "Crystal Wave",
+    "price": 510,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 100,
+    "boatType": "Luxury Yachts",
+    "features": ["Wi-fi", "Bluetooth", "DJ allowed", "Air Conditioning"],
+    "catering": ["Licensed bar"],
+    "shortDescription": "A luxurious yacht offering modern amenities and space for up to 100 guests, ideal for upscale events.",
+    "longDescription": "Crystal Wave is the epitome of luxury on Sydney Harbour, offering a sleek design with modern features like Wi-Fi, Bluetooth, and DJ availability. This yacht is perfect for high-end events, weddings, or corporate gatherings, with a licensed bar to cater to your guests.",
+    "events": ["wedding", "corporate", "newyear", "vivid"]
+  },
+  {
+    "id": 17,
+    "name": "Serene Waters",
+    "price": 470,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 90,
+    "boatType": "Sailing",
+    "features": ["Wi-fi", "Sound system", "Swimming"],
+    "catering": ["BBQ", "Licensed bar"],
+    "shortDescription": "A stylish sailing yacht with luxurious amenities for up to 90 guests, perfect for any celebration.",
+    "longDescription": "Serene Waters offers a premium sailing experience with features like Wi-Fi, a sound system, and swimming access. Ideal for weddings, corporate events, or social gatherings, this yacht provides both comfort and elegance on Sydney Harbour. BBQ and licensed bar options are available.",
+    "events": ["vivid", "wedding", "christmas"]
+  },
+  {
+    "id": 18,
+    "name": "Harbour Spirit",
+    "price": 600,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 110,
+    "boatType": "Pontoon",
+    "features": ["Wi-fi", "Air Conditioning", "DJ allowed"],
+    "catering": ["Catering & Drink available"],
+    "shortDescription": "A modern pontoon boat with luxurious amenities, perfect for large events with up to 110 guests.",
+    "longDescription": "Harbour Spirit is designed for large gatherings and events, featuring modern amenities like Wi-Fi, air conditioning, and DJ availability. Whether for a wedding, corporate event, or large social gathering, this pontoon boat ensures a memorable experience on Sydney Harbour.",
+    "events": ["wedding", "newyear", "corporate", "birthday"]
+  },
+  {
+    "id": 19,
+    "name": "Majestic Seas",
+    "price": 540,
+    "imageUrl": "https://yachtsmen.com/wp-content/uploads/2023/11/A7R04160_edited.jpg",
+    "maxGuests": 105,
+    "boatType": "Catamaran",
+    "features": ["Bluetooth", "Wi-fi", "Sound system"],
+    "catering": ["BYO allowed", "BBQ"],
+    "shortDescription": "A spacious catamaran with amenities for both relaxation and entertainment, ideal for up to 105 guests.",
+    "longDescription": "Majestic Seas offers a unique blend of relaxation and fun, with amenities like Wi-Fi, Bluetooth, and a sound system. Perfect for weddings, social gatherings, or casual outings, this catamaran provides flexibility with BYO catering and BBQ options.",
+    "events": ["wedding", "vivid", "australiaday"]
   }
 ]

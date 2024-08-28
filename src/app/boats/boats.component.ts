@@ -13,6 +13,7 @@ interface Boat {
   boatType: string;
   features: string[];
   catering: string[];
+  events: string[];
 }
 
 @Component({
@@ -23,7 +24,6 @@ interface Boat {
   styleUrl: './boats.component.css',
 })
 export class BoatsComponent {
-
   isSidebarOpen = false;
   boatType: string = '';
   header: string = '';
@@ -128,7 +128,9 @@ export class BoatsComponent {
   }
 
   filterByEvent(boat: Boat, event: string): boolean {
-    return event ? boat.name.toLowerCase().includes(event.toLowerCase()) : true; // Adjust this logic as needed
+    return event
+      ? boat.events.map((e) => e.toLowerCase()).includes(event.toLowerCase())
+      : true;
   }
 
   filterByBoatType(boat: Boat, boatTypes: string[]): boolean {

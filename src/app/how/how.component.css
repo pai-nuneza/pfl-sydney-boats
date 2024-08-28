@@ -15,13 +15,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Adjust the RGBA values to change darkness level */
-    mix-blend-mode: multiply; /* Ensure overlay only darkens the background */
-    z-index: 0; /* Ensure the overlay is behind the content */
+    background: rgba(0, 0, 0, 0.3);
+    /* Adjust the RGBA values to change darkness level */
+    mix-blend-mode: multiply;
+    /* Ensure overlay only darkens the background */
+    z-index: 0;
+    /* Ensure the overlay is behind the content */
 }
 
 /* Ensure the content is above the overlay */
-.background-image-container > * {
+.background-image-container>* {
     position: relative;
     z-index: 1;
 }
