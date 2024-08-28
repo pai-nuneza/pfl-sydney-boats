@@ -1,6 +1,6 @@
 .background-image-container {
     position: relative;
-    height: 25vh;
+    min-height: 25vh;
     background-image: url('https://www.sydneyharbouryachtcharter.com.au/wp-content/uploads/2022/02/CHAOS-10.jpg');
     background-size: cover;
     background-repeat: no-repeat;

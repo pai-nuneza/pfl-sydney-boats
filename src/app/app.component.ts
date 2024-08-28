@@ -12,7 +12,7 @@ import { initFlowbite } from 'flowbite';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Sydney Boat Rentals';
+  title = 'Harbour Fleet';
 
   ngOnInit(): void {
     initFlowbite();

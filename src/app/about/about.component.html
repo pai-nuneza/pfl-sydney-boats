@@ -1,7 +1,7 @@
 <div class="background-image-container flex justify-center items-center">
     <div class="container flex flex-col justify-center">
         <h1 class="font-bold text-white text-4xl sm:text-5xl md:text-6xl pb-2">
-            About Sydney Boat Rentals
+            About Harbour Fleet
         </h1>
     </div>
 </div>
@@ -14,29 +14,31 @@
         </div>
         <div
             class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Who we are
-            </h1>
-            <p class="mb-8 leading-relaxed">Sydney Harbour Escapes is Sydney’s premier boat rental service, helping
-                Sydneysiders celebrate special occasions on the water since 2000. We started off as a small, family
-                business with only a handful of boats. But our commitment to excellent service has now allowed us to own
-                a fleet of over 140 boats, and a team of experienced captains and staff to match.
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-5">Who we are</h1>
 
-                We take great pride in providing top tier customer service and treating all of our customers with
-                respect. We do this by creating genuine positive relationships with everyone who rents our boats, being
-                the ultimate professionals and displaying patience - even in the most choppiest of waters.</p>
+            <p class="mb-8 leading-relaxed">Harbour Fleet is Sydney’s leading luxury boat hire service, offering
+                unforgettable experiences on the water since 2000. What began as a small family-owned operation with
+                just a few vessels has grown into a premier fleet of over 140 boats, supported by a dedicated team of
+                skilled captains and staff.
+
+                We are committed to delivering exceptional service, treating every client with respect, and building
+                lasting relationships. Our professionalism and dedication ensure a smooth experience, even when
+                navigating the most challenging waters.</p>
+
         </div>
     </div>
 </section>
 
 <section class="text-gray-600 bg-gray-200 body-font">
-    <div class="container px-5 py-20 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="text-4xl font-medium bold title-font text-gray-900 font-bold uppercase">OUR TEAM
-            </h1>
+    <div class="container px-5 py-10 mx-auto">
+        <div class="grid grid-cols-1 place-items-center text-center md:block">
+            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Meet the People
+                Behind Our Success</h2>
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-20 uppercase">Our Team</h1>
         </div>
         <div class="flex flex-wrap -m-4">
             <div class="flex flex-wrap -m-4">
-                <div *ngFor="let member of teamMembers" class="p-4 lg:w-1/2">
+                <div *ngFor="let member of teamMembers" class="p-8 lg:w-1/2">
                     <div
                         class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
                         <img alt="team"
@@ -72,6 +74,77 @@
                             </span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-10 mx-auto">
+        <div class="text-center my-8">
+            <h2 class="text-3xl font-bold mb-6">Why Choose Us</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Quick Response -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" />
+                            <path d="M8 9h4M8 11h4M8 7h4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Quick Response</h3>
+                    <p class="text-gray-600">When you inquire about one of our boats, we make sure to get back to you
+                        within the
+                        hour.</p>
+                </div>
+
+                <!-- Ultimate Professionalism -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 11V3m0 0L8.5 6.5M12 3l3.5 3.5M17 21h-2a2 2 0 01-2-2v-5h4v5a2 2 0 01-2 2zM7 21h2a2 2 0 002-2v-5H7v5a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Ultimate Professionalism</h3>
+                    <p class="text-gray-600">Our staff are patient, friendly, and experienced. They go above and beyond
+                        to make
+                        sure your boat experience exceeds expectations.</p>
+                </div>
+
+                <!-- Satisfaction Guaranteed -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M5 2a3 3 0 00-3 3v1a2 2 0 002 2v7a2 2 0 002 2h6a2 2 0 002-2v-7a2 2 0 002-2V5a3 3 0 00-3-3H5z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Satisfaction Guaranteed</h3>
+                    <p class="text-gray-600">We guarantee fun times, party vibes, and a boating experience you’ll never
+                        forget!
+                    </p>
+                </div>
+
+                <!-- A Boat For Every Occasion -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M12 2a10 10 0 110 20 10 10 0 010-20z" />
+                            <path d="M8 12a4 4 0 118 0 4 4 0 01-8 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">A Boat For Every Occasion</h3>
+                    <p class="text-gray-600">Whether it's a wedding, corporate event, or private party, we have the
+                        perfect boat
+                        for your needs.</p>
                 </div>
             </div>
         </div>

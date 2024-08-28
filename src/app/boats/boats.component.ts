@@ -23,6 +23,8 @@ interface Boat {
   styleUrl: './boats.component.css',
 })
 export class BoatsComponent {
+
+  isSidebarOpen = false;
   boatType: string = '';
   header: string = '';
 
