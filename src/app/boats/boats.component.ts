@@ -3,18 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import boatsData from '../../assets/data/boats.json';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-
-interface Boat {
-  id: number;
-  name: string;
-  price: number;
-  imageUrl: string;
-  maxGuests: number;
-  boatType: string;
-  features: string[];
-  catering: string[];
-  events: string[];
-}
+import { Boat } from '../../models/boat';
 
 @Component({
   selector: 'app-boats',
@@ -134,6 +123,7 @@ export class BoatsComponent {
   }
 
   filterByBoatType(boat: Boat, boatTypes: string[]): boolean {
+    console.log('boat type');
     return !boatTypes.length || boatTypes.includes(boat.boatType);
   }
 

@@ -14,7 +14,7 @@ import { initFlowbite } from 'flowbite';
 export class AppComponent {
   title = 'Harbour Fleet';
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
     initFlowbite();
   }
 }

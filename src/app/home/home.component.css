@@ -4,6 +4,7 @@
     background-image: url('https://images.unsplash.com/photo-1523496922380-91d5afba98a3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8eWFjaHR8ZW58MHx8MHx8fDA%3D');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top;
     animation: move-background 50s linear infinite alternate;
 }
 
@@ -20,16 +21,14 @@
 @media (max-width: 768px) {
     .background-image-container {
         height: 50vh;
-        /* Adjust as needed */
-        /* Additional styles for mobile */
+        animation: move-background 10s infinite alternate ease-in-out;
     }
 }
 
 @media (max-width: 480px) {
     .background-image-container {
         height: 40vh;
-        /* Adjust as needed */
-        /* Additional mobile-specific styles */
+        animation: move-background 10s infinite alternate ease-in-out;
     }
 }
 
@@ -41,20 +40,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    /* Adjust the RGBA values to change darkness level */
+    background: rgba(0, 0, 0, 0.3);
     mix-blend-mode: multiply;
-    /* Ensure overlay only darkens the background */
     z-index: 0;
-    /* Ensure the overlay is behind the content */
 }
 
-/* Ensure the content is above the overlay */
 .background-image-container>* {
     position: relative;
     z-index: 1;
 }
-
 
 html,
 body {
