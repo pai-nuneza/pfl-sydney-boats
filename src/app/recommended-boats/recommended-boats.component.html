@@ -1,0 +1,51 @@
+<div class="container mx-auto py-8">
+    <h2 class="text-center text-3xl font-bold mb-6">Our Recommended Boats</h2>
+    <div class="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
+
+    <swiper-container pagination="true" navigation="true" class="mySwiper px-10" slides-per-view="1" space-between="100"
+        breakpoints='{
+        "640": {
+            "slidesPerView": 1,
+            "spaceBetween": 10
+        },
+        "768": {
+            "slidesPerView": 2,
+            "spaceBetween": 5
+        },
+        "1024": {
+            "slidesPerView": 4,
+            "spaceBetween": 30
+        }
+    }'>
+
+        <swiper-slide *ngFor="let boat of recommendedBoats">
+            <div class="grid grid-cols-1">
+                <div class="bg-white  shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-200 cursor-pointer"
+                    routerLinkActive="active-link">
+
+                    <img [src]="boat.imageUrl" class="w-full h-48 object-cover">
+
+                    <div class="p-3">
+                        <h3 class="text-lg font-semibold">{{ boat.name }}</h3>
+                        <div class="flex justify-between items-center ">
+                            <p class="text-gray-600">From</p>
+                            <p class="text-gray-600">Max Guest</p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-md font-bold text-gray-900">${{ boat.price }}/hr</p>
+                            <p class="flex items-center text-gray-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 12V3.75a.75.75 0 00-1.5 0V12H9.5V3.75a.75.75 0 00-1.5 0V12H4.25a.75.75 0 00-.75.75v2.25c0 2.907 2.343 5.25 5.25 5.25h6.75c2.907 0 5.25-2.343 5.25-5.25V12.75a.75.75 0 00-.75-.75H16z" />
+                                </svg>
+                                {{ boat.maxGuests }}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+</div>

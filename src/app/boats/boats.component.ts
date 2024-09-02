@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import boatsData from '../../assets/data/boats.json';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
@@ -11,6 +11,7 @@ import { Boat } from '../../models/boat';
   imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './boats.component.html',
   styleUrl: './boats.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class BoatsComponent {
   isSidebarOpen = false;
@@ -50,14 +51,15 @@ export class BoatsComponent {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.boatType = params.get('type')!;
-      if (this.boatType == 'luxury') {
-        this.header = 'Luxury';
-      } else if (this.boatType == 'corporate') {
-        this.header = 'Corporate';
+      if (this.boatType) {
+        // Explicitly reset the boatType form control to an empty array first
+        this.filterForm.get('boatType')?.setValue([], { emitEvent: false });
+        this.filterForm.get('boatType')?.setValue([this.boatType]);
       }
     });
 
-    this.filteredBoats = this.boats; // Initial load, no filters applied
+    // boatType
+    this.applyFilters();
     this.filterForm.valueChanges.subscribe(() => this.applyFilters());
   }
 
@@ -123,7 +125,7 @@ export class BoatsComponent {
   }
 
   filterByBoatType(boat: Boat, boatTypes: string[]): boolean {
-    console.log('boat type');
+    console.log('boat type', boat.boatType);
     return !boatTypes.length || boatTypes.includes(boat.boatType);
   }
 

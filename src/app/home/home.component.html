@@ -104,7 +104,7 @@
             }'>
             <swiper-slide *ngFor="let event of events" class="flex justify-center">
                 <a [routerLink]="[event.link]"
-                    class="relative block  max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-transform duration-300 ease-in-out">
+                    class="relative block  max-w-xs border border-solid border-gray-200 overflow-hidden transition-transform duration-300 ease-in-out">
                     <div class="relative">
                         <img [src]="event.image" alt="Card image" class="block w-full" />
                         <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
@@ -181,7 +181,7 @@
 </section>
 
 <section class="text-gray-600 bg-gray-200 body-font">
-    <div class="container px-5 py-20 mx-auto">
+    <div class="container px-5 py-10 mx-auto">
         <div class="flex flex-col text-center w-full mb-10">
             <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Plan your trips
             </h2>
@@ -203,7 +203,7 @@
         }'>
             <swiper-slide *ngFor="let holiday of holidays; let i = index" class="flex justify-center">
                 <div [ngClass]="{'md:mt-10': i % 2 === 0, 'md:mb-10': i % 2 !== 0}"
-                    class="relative max-w-xs border border-solid border-gray-200 rounded-2xl overflow-hidden transition-all duration-500">
+                    class="relative max-w-xs border border-solid border-gray-200 overflow-hidden transition-all duration-500">
                     <div class="relative">
                         <img [src]="holiday.imageUrl" alt="Holiday image" class="block w-full" />
                         <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
@@ -225,7 +225,7 @@
                     <!-- The single image with responsive width and height -->
                     <div class="relative">
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/3b/95/61/photo2jpg.jpg?w=500&h=500&s=1"
-                            alt="Sydney City" class="w-full h-auto max-w-xs md:max-w-sm rounded-lg shadow-md mx-auto">
+                            alt="Sydney City" class="w-full h-auto max-w-xs md:max-w-sm  shadow-md mx-auto">
                     </div>
                 </div>
 

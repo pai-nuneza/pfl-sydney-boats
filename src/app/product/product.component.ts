@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import boatsData from '../../assets/data/boats.json';
+import { RecommendedBoatsComponent } from '../recommended-boats/recommended-boats.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [RecommendedBoatsComponent, CommonModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
@@ -30,7 +32,7 @@ export class ProductComponent {
     // Find the boat by ID
     this.boat = boatsData.find((b) => b.id === boatId);
 
-    console.log('found!' ,  this.boat);
+    console.log('found!', this.boat);
     if (!this.boat) {
       console.error('Boat not found.');
       // Handle case where the boat is not found, e.g., redirect to a 404 page

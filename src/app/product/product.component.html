@@ -1,108 +1,265 @@
-<div class="container mx-auto px-4 py-8">
-    <!-- Main content -->
-    <div class="flex flex-col lg:flex-row gap-8">
-        <!-- Left section: Images and details -->
-        <div class="w-full lg:w-3/5">
-            <!-- Image Slider (You can replace with a real slider later) -->
-            <div class="mb-4">
-                <img src="{{boat.imageUrl}}" alt="Boat Image" class="w-full h-96 object-cover rounded-lg">
+<section class="background-image-container bg-gray-200">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8 p-5 bg-white">
+            <div class="w-full lg:w-3/5">
+                <div class="mb-4">
+                    <img src="{{boat.imageUrl}}" alt="Boat Image" class="w-full h-96 object-cover shadow-md">
+                </div>
+                <!-- Thumbnails (static for now, add real functionality later) -->
+                <div class="flex gap-2">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 1" class="w-20 h-20 shadow-md object-cover">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 2" class="w-20 h-20 shadow-md object-cover">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 3" class="w-20 h-20 shadow-md object-cover">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 4" class="w-20 h-20 shadow-md object-cover">
+                </div>
             </div>
-            <!-- Thumbnails (static for now, add real functionality later) -->
-            <div class="flex gap-2">
-                <img src="https://via.placeholder.com/150" alt="Thumbnail 1" class="w-20 h-20 object-cover rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Thumbnail 2" class="w-20 h-20 object-cover rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Thumbnail 3" class="w-20 h-20 object-cover rounded-lg">
-                <img src="https://via.placeholder.com/150" alt="Thumbnail 4" class="w-20 h-20 object-cover rounded-lg">
+
+            <div class="w-full lg:w-2/5 bg-blue-900 text-white p-6 self-start">
+                <h1 class="text-3xl font-bold mb-2">{{boat.name}}</h1>
+                <p class="text-lg mb-4">{{boat.shortDescription}}</p>
+                <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold py-2 px-4  mb-4">
+                    Enquire Now
+                </button>
+                <button
+                    class="w-full bg-transparent border border-white hover:bg-white hover:text-blue-900 font-semibold py-2 px-4  mb-4">
+                    Save For Later
+                </button>
+                <div class="flex items-center space-x-4 mb-4">
+                    <span>Share:</span>
+                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-envelope"></i></a>
+                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </div>
 
-        <!-- Right section: Boat Info and Actions -->
-        <div class="w-full lg:w-2/5 bg-blue-900 text-white p-6 rounded-lg">
-            <h1 class="text-3xl font-bold mb-2">{{boat.name}}</h1>
-            <p class="text-lg mb-4">112' San Lorenzo Superyacht Luxury Boat Hire Sydney</p>
-            <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold py-2 px-4 rounded mb-4">
-                Enquire Now
-            </button>
-            <button
-                class="w-full bg-transparent border border-white hover:bg-white hover:text-blue-900 font-semibold py-2 px-4 rounded mb-4">
-                Save For Later
-            </button>
-            <div class="flex items-center space-x-4 mb-4">
-                <span>Share:</span>
-                <a href="#" class="hover:text-yellow-500"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-yellow-500"><i class="fab fa-envelope"></i></a>
-                <a href="#" class="hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
-            </div> 
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+            <!-- Left Column: Boat Details and Pricing Table -->
+            <div class="lg:col-span-2 bg-white p-6 shadow-md self-start">
+                <h2 class="text-2xl font-bold mb-4">{{boat.name}}</h2>
+                <p class="text-gray-700 mb-4">{{boat.longDescription}}</p>
+
+                <div class="mt-8">
+                    <h3 class="text-lg font-bold mb-4 bg-sky-200 px-4 py-2">Pricing</h3>
+
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
+                        <div class="bg-gray-100 font-semibold p-2">Jan - Feb</div>
+                        <div class="bg-white p-2">$720 Per Hour</div>
+
+                        <div class="bg-gray-100 font-semibold p-2">Mar - Oct</div>
+                        <div class="bg-white p-2">
+                            $620 Per Hour (4 Hour Charter)<br>
+                            $2480 3 Hour Charter<br>
+                            $1860 2 Hour Charter<br>
+                            $1400 (Subject To Approval)
+                        </div>
+
+                        <div class="bg-gray-100 font-semibold p-2">Nov - Dec</div>
+                        <div class="bg-white p-2">$790 Per Hour</div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <div class="bg-sky-200 p-2 font-bold text-lg">BYO Charters</div>
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
+                        <div class="bg-white p-2">Includes crockery, utensils, cutlery, glasses</div>
+                        <div class="bg-white p-2">Yes</div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <div class="bg-sky-200 p-2 font-bold text-lg">Wharf Fees</div>
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
+                        <div class="bg-white p-2">Pick up and drop off wharf fees apply. Check your quote and contract
+                            for more info.</div>
+                        <div class="bg-white p-2">Usually $100 Total</div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <div class="bg-sky-200 p-2 font-bold text-lg">Staff Fees</div>
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
+                        <div class="bg-white p-2">1 Wait Staff Required Per 10-15 Guests</div>
+                        <div class="bg-white p-2">$300 Per Wait Staff For A 4 Hour Charter.
+                            Additional Hours $50 per waitstaff per hour</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
+                        <div class="bg-white p-2">1 Chef</div>
+                        <div class="bg-white p-2">$380 Per Chef For 4 Hour Charter. Additional Hours $80 Per Chef Per
+                            Hour</div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <div class="bg-sky-200 p-2 font-bold text-lg">Other Fees & Special Day Rates</div>
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
+                        <div class="bg-white p-2">NYE - 7 hrs (all inclusive) upt o 9 guests</div>
+                        <div class="bg-white p-2">$12,600</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
+                        <div class="bg-white p-2">Boxing Day</div>
+                        <div class="bg-white p-2">$700 Per Hour</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Additional Details -->
+            <div class="lg:col-span-1">
+                <div class="bg-white p-6 shadow-md self-start">
+                    <ul>
+                        <li class="flex justify-between items-center">
+                            <span>Max Guests</span>
+                            <span class="font-bold">60</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Price from</span>
+                            <span class="font-bold">$480/hr</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Min. hours</span>
+                            <span class="font-bold">4 hrs</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>BYO</span>
+                            <span class="font-bold text-green-600">Yes</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Captain</span>
+                            <span class="font-bold">Included</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Casual buffet</span>
+                            <span class="font-bold">94</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section: Why Book Online With Us -->
+                <div class="mt-8 p-6 bg-white">
+                    <div class="font-bold text-lg mb-4">Why Book Online With Us?</div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <div class="font-semibold">Book now, with no online booking fee*</div>
+                                <div class="text-gray-500">Free consultation, free booking service</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <div class="font-semibold">Free cancellation</div>
+                                <div class="text-gray-500">Cancel your booking anytime with no risks</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <div class="font-semibold">Book now. Pay later</div>
+                                <div class="text-gray-500">Make your payment after you enjoy the cruise</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-6 border-gray-200">
+                    <div class="font-bold text-center">Payment Methods</div>
+                    <div class="flex justify-center mt-4 space-x-4">
+                        <!-- Add your payment method icons here -->
+                        <img src="https://w7.pngwing.com/pngs/385/197/png-transparent-visa-flat-brand-logo-icon-thumbnail.png"
+                            alt="Visa" class="h-8">
+                        <img src="https://w7.pngwing.com/pngs/648/903/png-transparent-mastercard-logo-logo-payment-visa-mastercard-paypal-mastercard-icon-text-service-mobile-payment-thumbnail.png"
+                            alt="MasterCard" class="h-8">
+                        <img src="https://w7.pngwing.com/pngs/442/324/png-transparent-american-express-icon.png"
+                            alt="American Express" class="h-8">
+                        <img src="https://w7.pngwing.com/pngs/883/716/png-transparent-afterpay-logo-thumbnail-tech-companies-thumbnail.png"
+                            alt="Afterpay" class="h-8">
+                        <img src="https://w7.pngwing.com/pngs/405/876/png-transparent-wechat-mobile-payment-global-payments-service-%E5%BE%AE%E4%BF%A1-angle-leaf-logo-thumbnail.png"
+                            alt="WeChat Pay" class="h-8">
+                    </div>
+                </div>
+
+                <!-- Section: Brochure PDF -->
+                <div class="mt-8 p-6 bg-white">
+                    <div class="font-bold text-lg mb-4">Brochure Pdf</div>
+                    <div class="flex justify-center">
+                        <button
+                            class="flex items-center space-x-2 border border-blue-500 text-blue-500 py-2 px-4 rounded">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4v16m8-8H4" />
+                            </svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Section: Recommended By Industry -->
+                <div class="mt-8 p-6 bg-white">
+                    <div class="font-bold text-lg mb-4">Recommended By Industry</div>
+                    <div class="flex justify-center space-x-6">
+                        <!-- Add your industry logos here -->
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQuIeWJHx4cTCaXYv_-8B2M_HwuV0FclYdQw&s"
+                            alt="Destination NSW" class="h-12">
+                        <img src="https://w7.pngwing.com/pngs/913/38/png-transparent-tourism-australia-south-australia-travel-government-of-australia-travel-text-logo-organism.png"
+                            alt="Tourism Australia" class="h-12">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpzyoxstTKzGVBa2Wex84fIWru3j2a8N5YgopvbEi5FFk0771MnDFLiwpYovG-qCkCDlU&usqp=CAU"
+                            alt="TripAdvisor" class="h-12">
+                    </div>
+                </div>
+
+                <!-- Enquire Button -->
+                <div class="fixed bottom-8 right-8">
+                    <button
+                        class="bg-yellow-400 text-white py-2 px-4 rounded-full shadow-lg flex items-center space-x-2">
+                        <span>Enquire</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 12h14m-7-7l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Section: Star Captain -->
+                <div class="mt-8 p-6 bg-white text-center">
+                    <div class="font-bold text-lg mb-4">Star Captain</div>
+
+                    <div class="flex justify-center space-x-8">
+                        <!-- Captain 1 -->
+                        <div class="flex flex-col items-center">
+                            <img src="https://i0.wp.com/www.resilientworker.net/wp-content/uploads/2016/04/Captain.jpg" alt="Jack Hamilton"
+                                class="rounded-full h-32 w-32 object-cover mb-4">
+                            <div class="font-semibold text-lg">Jack Hamilton</div>
+                            <div class="text-gray-500">Meet our chief captain</div>
+                        </div>
+
+                        <!-- Captain 2 -->
+                        <div class="flex flex-col items-center">
+                            <img src="https://theseacadetmagazine.org/wp-content/uploads/2023/04/LAB_2756.jpg" alt="Second Captain"
+                                class="rounded-full h-32 w-32 object-cover mb-4">
+                            <div class="font-semibold text-lg">Second Captain</div>
+                            <div class="text-gray-500">Meet our deputy captain</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Details and Pricing Section -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-        <!-- Boat Description -->
-        <div class="col-span-2 bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold mb-4">112' San Lorenzo Superyacht Luxury Boat Hire Sydney</h2>
-            <p class="text-gray-700 mb-4">The newly built luxury superyacht ‘Au’ is a statement of luxury. Designed for
-                unprecedented luxury and comfort. She has both muscle and beauty that gives you and your client a
-                commanding charter presence on Sydney Harbour. Equipped with the state of the art Jacuzzi and
-                surrounding sun decks, the voyage is meant to be a relaxing one.</p>
-        </div>
 
-        <!-- Key Information -->
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <ul class="space-y-4">
-                <li class="flex justify-between items-center">
-                    <span>Max Guests</span>
-                    <span class="font-bold">60</span>
-                </li>
-                <li class="flex justify-between items-center">
-                    <span>Price from</span>
-                    <span class="font-bold">$480/hr</span>
-                </li>
-                <li class="flex justify-between items-center">
-                    <span>Min. hours</span>
-                    <span class="font-bold">4 hrs</span>
-                </li>
-                <li class="flex justify-between items-center">
-                    <span>BYO</span>
-                    <span class="font-bold text-green-600">Yes</span>
-                </li>
-                <li class="flex justify-between items-center">
-                    <span>Captain</span>
-                    <span class="font-bold">Included</span>
-                </li>
-                <li class="flex justify-between items-center">
-                    <span>Casual buffet</span>
-                    <span class="font-bold">94</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Pricing Section -->
-    <div class="bg-white p-6 mt-8 rounded-lg shadow-md">
-        <h3 class="text-2xl font-bold mb-4">Pricing</h3>
-        <table class="w-full text-left">
-            <thead>
-                <tr class="bg-gray-100">
-                    <th class="py-2 px-4">Period</th>
-                    <th class="py-2 px-4">Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="py-2 px-4">Jan - Feb</td>
-                    <td class="py-2 px-4">$720 Per Hour</td>
-                </tr>
-                <tr>
-                    <td class="py-2 px-4">Mar - Oct</td>
-                    <td class="py-2 px-4">$620 Per Hour (4 Hour Charter)</td>
-                </tr>
-                <tr>
-                    <td class="py-2 px-4">Mar - Oct</td>
-                    <td class="py-2 px-4">$2480 3 Hour Charter</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+<app-recommended-boats></app-recommended-boats>
