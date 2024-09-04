@@ -1,44 +1,45 @@
 [
   {
     "title": "Wedding",
-    "description": "Celebrate your big day in style aboard a luxurious yacht with breathtaking views of Sydney Harbour.",
-    "image": "https://media.istockphoto.com/id/912920224/photo/just-married-couple-on-yacht-happy-bride-and-groom-on-their-wedding-day.jpg?s=612x612&w=0&k=20&c=2Z4O57Wi1HH1Jhg5X11L3nkVP2HXzovG3atkQGysQLo=",
-    "link": "/boats/wedding"
+    "description": "Celebrate your big day on a luxury yacht in Sydney Harbour.",
+    "image": "https://images.stockcake.com/public/6/7/8/678d52bc-ddc7-4675-99f7-8c670c4bd96c_large/nautical-wedding-bliss-stockcake.jpg",
+    "link": "/boats"
+  },
+
+  {
+    "title": "Sailing Adventure",
+    "description": "Set sail on an exciting Sydney Harbour adventure.",
+    "image": "https://images.stockcake.com/public/a/3/5/a3553830-756f-426d-9ba6-2c229c4d2c25_large/sailing-ocean-adventure-stockcake.jpg",
+    "link": "/boats/Sailing"
   },
   {
     "title": "Private Party",
-    "description": "Host an unforgettable private party with friends and family while cruising through Sydney’s waters.",
-    "image": "https://dubriani.com/wp-content/uploads/2020/08/Yacht-Solandge-Party-Time.jpeg",
-    "link": "/boats/party"
+    "description": "Host an unforgettable party while cruising Sydney’s waters.",
+    "image": "assets/images/event-party.jpg",
+    "link": "/boats/Power boats"
   },
   {
-    "title": "Birthday Party",
-    "description": "Celebrate your special day on a luxury yacht with stunning views and fun activities on board.",
-    "image": "https://xclusiveyachts.com/photo/blog/10/webp/720/3.webp",
-    "link": "/boats/party"
+    "title": "Stag Party",
+    "description": "Celebrate with an epic party on a luxury yacht.",
+    "image": "https://www.timelessyachtcharters.com/_lib/imgs/occasions/21/64c03e92-08d0-4041-a86c-afdc7b18975c.jpg",
+    "link": "/boats/Power boats"
   },
   {
-    "title": "Wind and Dine",
-    "description": "Enjoy a luxurious dining experience on the water, with gourmet meals and stunning harbour views.",
-    "image": "https://yachtchartersnow.com/wp-content/uploads/2023/05/Private-dinner-party-charter-one-yachts-1024x768.webp",
-    "link": "/boats/party"
+    "title": "Birthdays",
+    "description": "Celebrate your birthday with fun and scenic views on a yacht.",
+    "image": "assets/images/event-birthday.jpg",
+    "link": "/boats/Power boats"
+  },
+  {
+    "title": "Wine and Dine",
+    "description": "Enjoy gourmet dining with stunning harbour views.",
+    "image": "https://images.stockcake.com/public/c/6/2/c62c0a8a-ce5b-44e5-98ef-59cbc9b806a4_large/sunset-yacht-gathering-stockcake.jpg",
+    "link": "/boats/Luxury Yachts"
   },
   {
     "title": "Gender Reveal",
-    "description": "Reveal the biggest surprise of your life with a memorable gender reveal party on a beautiful yacht.",
-    "image": "https://pbs.twimg.com/media/Fp9gQreXoAAuvYk.jpg",
-    "link": "/boats/party"
-  },
-  {
-    "title": "Sailing Adventure",
-    "description": "Set sail on an exhilarating adventure around Sydney Harbour, perfect for sailing enthusiasts.",
-    "image": "https://eastcoastsailing.com.au/wp-content/uploads/2021/08/Margaret-Rintoul-V-Yacht-Featured-Image.jpg",
-    "link": "/boats/Sailing"
-  },
-  {
-    "title": "Bachelor/Bachelorette Party",
-    "description": "Celebrate your last days of singlehood with an epic bachelor or bachelorette party on a luxury yacht.",
-    "image": "https://www.timelessyachtcharters.com/_lib/imgs/occasions/21/64c03e92-08d0-4041-a86c-afdc7b18975c.jpg",
-    "link": "/boats/Sailing"
+    "description": "Host a memorable gender reveal party on a yacht.",
+    "image": "https://images.stockcake.com/public/1/a/3/1a398c37-7f6d-4ee6-ac68-761bd7659ded_large/joyful-celebration-time-stockcake.jpg",
+    "link": "/boats/Power boats"
   }
 ]

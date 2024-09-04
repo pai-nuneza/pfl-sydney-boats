@@ -1,6 +1,6 @@
 .background-image-container {
     position: relative;
-    height: 50vh;
+    height: 25vh;
     background-image: url('https://blog.clickandboat.com/en/wp-content/uploads/2022/09/blog-featured-image-min.jpeg');
     background-size: cover;
     /* background-position: center; */

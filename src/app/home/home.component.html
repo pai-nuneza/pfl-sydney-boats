@@ -1,95 +1,22 @@
-<div class="background-image-container flex justify-center items-center">
-    <div class="container text-center flex flex-col justify-center">
+<div class="background-image-container flex justify-center">
+    <div class="container text-center flex flex-col pt-32">
         <h1 class="font-bold text-white text-4xl sm:text-5xl md:text-6xl pb-2">
-            Discover Harbour Fleet's <br>Unrivaled Boat Hire Experience
+            Harbour Fleet | Boats & Yachts
         </h1>
-        <h2 class="text-white text-base sm:text-lg md:text-xl italic pb-4 ">
-            Luxury Boat Hire Crafted to Meet Your Every Expectation
+        <h2 class="text-sky-200 text-base sm:text-lg md:text-xl pb-4 ">
+            Premium Yacht Rentals Just for You
         </h2>
-        <div class="flex justify-center items-center mt-1">
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-5">
-                <div class="px-1">
-                    <button id="selectBoat" data-dropdown-toggle="selectBoatOptions"
-                        class="bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center w-full sm:w-auto"
-                        type="button">
-                        Where is your event?
-                        <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-
-                    <div id="selectBoatOptions"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="selectBoat">
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Wedding</a>
-                            </li>
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Corporate
-                                    Event</a></li>
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Birthday
-                                    Parties</a></li>
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Vivid
-                                    Sydney</a></li>
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Australia
-                                    Day</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="px-1">
-                    <button id="selectGuests" data-dropdown-toggle="selectGuestOptions"
-                        class="bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center w-full sm:w-auto"
-                        type="button">
-                        How many guests?
-                        <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-
-                    <div id="selectGuestOptions"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 shadow w-44 dark:bg-gray-700">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="selectGuests">
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Up
-                                    to 35 Guests</a></li>
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">36-70
-                                    Guests</a></li>
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">More
-                                    than 71 Guests</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="px-1">
-                    <button type="button"
-                        class="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 font-medium text-sm px-5 py-2.5 text-center w-full sm:w-auto">
-                        Find My Boat
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
 
 <section class="text-gray-600 body-font">
-    <div class="container px-5 py-10 mx-auto">
+    <div class="py-10 mx-auto bg-gray-200">
         <div class="grid grid-cols-1 place-items-center text-center md:block">
             <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Just for you</h2>
-            <h1 class="text-3xl font-extrabold text-gray-900 mb-12 uppercase">Events / Occasions</h1>
+            <h1 class="text-3xl font-extrabold text-gray-900">Events & Occasions</h1>
         </div>
-        <swiper-container autoplay-delay="2500" autoplay-disable-on-interaction="false" class="mySwiper"
-            slides-per-view="1" breakpoints='{
+        <swiper-container pagination="true" class="container mySwiper " slides-per-view="1" breakpoints='{
                 "640": {
                     "slidesPerView": 2,
                     "spaceBetween": 10 
@@ -103,13 +30,13 @@
                     "spaceBetween": 10
                 }
             }'>
-            <swiper-slide *ngFor="let event of events" class="flex justify-center">
+            <swiper-slide *ngFor="let event of events" class="flex justify-center py-10">
                 <a [routerLink]="[event.link]"
                     class="relative block max-w-xs border border-solid border-gray-200 overflow-hidden transition-transform duration-300 ease-in-out">
                     <div class="relative">
-                        <img [src]="event.image" alt="Card image" class="block w-full" />
+                        <img [src]="event.image" alt="Card image" class="block w-full shadow-md" />
                         <div
-                            class="absolute inset-0 flex flex-col justify-between pt-14 bg-gradient-to-t from-black to-transparent bg-opacity-50">
+                            class="absolute inset-0 flex flex-col justify-between pt-14 bg-gradient-to-t from-black/75 to-transparent">
                             <h1 class="text-2xl drop-shadow-lg font-semibold text-center text-white px-5 capitalize">{{
                                 event.title }}
                             </h1>
@@ -122,7 +49,7 @@
         </swiper-container>
     </div>
 
-    <div class="container py-20 mx-auto flex flex-wrap">
+    <div class="container py-20 px-32 mx-auto flex flex-wrap">
         <h2 class="px-10 lg:text-4xl font-extrabold text-2xl text-gray-900 title-font mb-2 md:w-2/5">Harbour Fleet,
             Sydney,<br> Started in 2021</h2>
         <div class="px-10 md:w-3/5 md:pl-6">
@@ -185,12 +112,12 @@
     </div>
 </section>
 
-<section class="text-gray-600 holidays-bg body-font">
+<section class="bg-gray-200 holidays-bg body-font">
     <div class="container px-5 py-10 mx-auto">
         <div class="flex flex-col text-center w-full mb-10">
-            <h2 class="text-xs text-white tracking-widest font-medium title-font mb-1 uppercase">Plan your trips
+            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Plan your trips
             </h2>
-            <h1 class="text-4xl font-extrabold uppercase title-font mb-4 bold text-white">Holiday Celebrations</h1>
+            <h1 class="text-3xl font-extrabold text-gray-900">Holiday Celebrations</h1>
         </div>
         <swiper-container autoplay-delay="2000" pagination="true" class="mySwiper" slides-per-view="1"
             space-between="10" breakpoints='{
@@ -204,19 +131,18 @@
             },
             "1024": {
                 "slidesPerView": 5,
-                "spaceBetween": 10
+                "spaceBetween": 30
             }
         }'>
-            <swiper-slide *ngFor="let holiday of holidays; let i = index" class="flex justify-center">
+            <swiper-slide *ngFor="let holiday of holidays; let i = index" class="flex justify-center pb-12">
                 <!-- This should link or filtered by events in boats component -->
                 <a [routerLink]="[holiday.link]"
                     class="relative block  max-w-xs overflow-hidden transition-transform duration-300 ease-in-out">
-                    <div [ngClass]="{'md:mt-10': i % 2 === 0, 'md:mb-10': i % 2 !== 0}"
-                        class="relative max-w-xs border border-gray-400 overflow-hidden transition-all duration-500">
+                    <div class="relative max-w-xs border border-gray-400 overflow-hidden transition-all duration-500">
                         <div class="relative ">
                             <img [src]="holiday.imageUrl" alt="Holiday image" class="block w-full" />
-                            <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
-                                <h1 class="text-3xl font-semibold text-white text-center capitalize">{{ holiday.title }}
+                            <div class="absolute inset-0 flex  text-centeritems-top pt-5 pl-5 bg-black bg-opacity-25">
+                                <h1 class="text-xl font-semibold text-white  capitalize">{{ holiday.title }}
                                 </h1>
                             </div>
                         </div>
@@ -224,8 +150,11 @@
                 </a>
             </swiper-slide>
         </swiper-container>
-        <div class="flex flex-col text-center w-full mt-10">
-            <h2 class="italic text-xl title-font mb-4 bold text-white">Book your dream holiday now</h2>
+        <div class="flex justify-center">
+            <a [routerLink]="'/boats'"
+                class="px-6 py-3 bg-blue-500 text-white font-bold rounded hover:bg-blue-600 transition">
+                Find the Perfect Boat for Your Dream Holiday
+            </a>
         </div>
     </div>
 </section>
@@ -274,33 +203,33 @@
     </div>
 </section>
 
-<section class="text-gray-600 body-font bg-blue-50 py-16">
+<section class="text-gray-600 body-font bg-gray-200 py-16">
     <div class="container mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 uppercase">Recommended by Industry</h2>
+            <h2 class="text-2xl font-extrabold text-gray-900 uppercase tracking-wide">Recommended by Industry</h2>
+            <p class="text-gray-500 text-lg mt-2">Trusted by leading organizations and travel industries</p>
         </div>
-        <div class="flex justify-center">
-            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex justify-center pb-14">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-center">
                 <!-- Logo 1 -->
-                <div class="flex justify-center">
+                <div class="flex justify-center transform hover:scale-105 transition-transform duration-300">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQuIeWJHx4cTCaXYv_-8B2M_HwuV0FclYdQw&s"
                         alt="Destination NSW" class="h-24 object-contain">
                 </div>
                 <!-- Logo 2 -->
-                <div class="flex justify-center">
+                <div class="flex justify-center transform hover:scale-105 transition-transform duration-300">
                     <img src="https://www.doswelldigital.com/wp-content/uploads/2018/01/australian-owned-operated-logo.png"
-                        alt="Logo 2" class="h-24 object-contain">
+                        alt="Australian Owned & Operated" class="h-24 object-contain">
                 </div>
-                <!-- Logo 4 -->
-                <div class="flex justify-center">
+                <!-- Logo 3 -->
+                <div class="flex justify-center transform hover:scale-105 transition-transform duration-300">
                     <img src="https://www.seabirds-and-seals.com/wp-content/uploads/2022/04/2021-Travellers-Choice-Logo.png"
                         alt="TripAdvisor Certificate of Excellence" class="h-24 object-contain">
                 </div>
-
                 <!-- Logo 4 -->
-                <div class="flex justify-center">
+                <div class="flex justify-center transform hover:scale-105 transition-transform duration-300">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Tourism_Australia_logo.svg/1200px-Tourism_Australia_logo.svg.png"
-                        alt="TripAdvisor Certificate of Excellence" class="h-24 object-contain">
+                        alt="Tourism Australia" class="h-24 object-contain">
                 </div>
             </div>
         </div>
