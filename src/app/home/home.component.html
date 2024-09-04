@@ -88,9 +88,10 @@
             <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Just for you</h2>
             <h1 class="text-3xl font-extrabold text-gray-900 mb-12 uppercase">Events / Occasions</h1>
         </div>
-        <swiper-container class="mySwiper" slides-per-view="1" space-between="10" breakpoints='{
+        <swiper-container autoplay-delay="2500" autoplay-disable-on-interaction="false" class="mySwiper"
+            slides-per-view="1" breakpoints='{
                 "640": {
-                    "slidesPerView": 1,
+                    "slidesPerView": 2,
                     "spaceBetween": 10 
                 },
                 "768": {
@@ -99,23 +100,27 @@
                 },
                 "1024": {
                     "slidesPerView": 4,
-                    "spaceBetween": 5
+                    "spaceBetween": 10
                 }
             }'>
             <swiper-slide *ngFor="let event of events" class="flex justify-center">
                 <a [routerLink]="[event.link]"
-                    class="relative block  max-w-xs border border-solid border-gray-200 overflow-hidden transition-transform duration-300 ease-in-out">
+                    class="relative block max-w-xs border border-solid border-gray-200 overflow-hidden transition-transform duration-300 ease-in-out">
                     <div class="relative">
                         <img [src]="event.image" alt="Card image" class="block w-full" />
-                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
-                            <h1 class="text-2xl font-semibold text-white capitalize">{{ event.title }}</h1>
+                        <div
+                            class="absolute inset-0 flex flex-col justify-between pt-14 bg-gradient-to-t from-black to-transparent bg-opacity-50">
+                            <h1 class="text-2xl drop-shadow-lg font-semibold text-center text-white px-5 capitalize">{{
+                                event.title }}
+                            </h1>
+                            <h1 class="text-white capitalize px-5 mb-5 ">{{
+                                event.description }}</h1>
                         </div>
                     </div>
                 </a>
             </swiper-slide>
         </swiper-container>
     </div>
-
 
     <div class="container py-20 mx-auto flex flex-wrap">
         <h2 class="px-10 lg:text-4xl font-extrabold text-2xl text-gray-900 title-font mb-2 md:w-2/5">Harbour Fleet,
@@ -180,14 +185,15 @@
     </div>
 </section>
 
-<section class="text-gray-600 bg-gray-200 body-font">
+<section class="text-gray-600 holidays-bg body-font">
     <div class="container px-5 py-10 mx-auto">
         <div class="flex flex-col text-center w-full mb-10">
-            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Plan your trips
+            <h2 class="text-xs text-white tracking-widest font-medium title-font mb-1 uppercase">Plan your trips
             </h2>
-            <h1 class="text-4xl font-extrabold uppercase title-font mb-4 bold text-gray-900">Holiday Celebrations</h1>
+            <h1 class="text-4xl font-extrabold uppercase title-font mb-4 bold text-white">Holiday Celebrations</h1>
         </div>
-        <swiper-container class="mySwiper" slides-per-view="1" space-between="10" breakpoints='{
+        <swiper-container autoplay-delay="2000" pagination="true" class="mySwiper" slides-per-view="1"
+            space-between="10" breakpoints='{
             "640": {
                 "slidesPerView": 2,
                 "spaceBetween": 10
@@ -202,17 +208,25 @@
             }
         }'>
             <swiper-slide *ngFor="let holiday of holidays; let i = index" class="flex justify-center">
-                <div [ngClass]="{'md:mt-10': i % 2 === 0, 'md:mb-10': i % 2 !== 0}"
-                    class="relative max-w-xs border border-solid border-gray-200 overflow-hidden transition-all duration-500">
-                    <div class="relative">
-                        <img [src]="holiday.imageUrl" alt="Holiday image" class="block w-full" />
-                        <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
-                            <h1 class="text-3xl font-semibold text-white capitalize">{{ holiday.title }}</h1>
+                <!-- This should link or filtered by events in boats component -->
+                <a [routerLink]="[holiday.link]"
+                    class="relative block  max-w-xs overflow-hidden transition-transform duration-300 ease-in-out">
+                    <div [ngClass]="{'md:mt-10': i % 2 === 0, 'md:mb-10': i % 2 !== 0}"
+                        class="relative max-w-xs border border-gray-400 overflow-hidden transition-all duration-500">
+                        <div class="relative ">
+                            <img [src]="holiday.imageUrl" alt="Holiday image" class="block w-full" />
+                            <div class="absolute inset-0 flex items-top pt-5 pl-5 bg-black bg-opacity-25">
+                                <h1 class="text-3xl font-semibold text-white text-center capitalize">{{ holiday.title }}
+                                </h1>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </swiper-slide>
         </swiper-container>
+        <div class="flex flex-col text-center w-full mt-10">
+            <h2 class="italic text-xl title-font mb-4 bold text-white">Book your dream holiday now</h2>
+        </div>
     </div>
 </section>
 
@@ -266,23 +280,27 @@
             <h2 class="text-2xl font-bold text-gray-900 uppercase">Recommended by Industry</h2>
         </div>
         <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Logo 1 -->
                 <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/200x100" alt="Destination NSW" class="h-24 object-contain">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQuIeWJHx4cTCaXYv_-8B2M_HwuV0FclYdQw&s"
+                        alt="Destination NSW" class="h-24 object-contain">
                 </div>
                 <!-- Logo 2 -->
                 <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/200x100" alt="Logo 2" class="h-24 object-contain">
-                </div>
-                <!-- Logo 3 -->
-                <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/200x100" alt="Logo 3" class="h-24 object-contain">
+                    <img src="https://www.doswelldigital.com/wp-content/uploads/2018/01/australian-owned-operated-logo.png"
+                        alt="Logo 2" class="h-24 object-contain">
                 </div>
                 <!-- Logo 4 -->
                 <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/200x100" alt="TripAdvisor Certificate of Excellence"
-                        class="h-24 object-contain">
+                    <img src="https://www.seabirds-and-seals.com/wp-content/uploads/2022/04/2021-Travellers-Choice-Logo.png"
+                        alt="TripAdvisor Certificate of Excellence" class="h-24 object-contain">
+                </div>
+
+                <!-- Logo 4 -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Tourism_Australia_logo.svg/1200px-Tourism_Australia_logo.svg.png"
+                        alt="TripAdvisor Certificate of Excellence" class="h-24 object-contain">
                 </div>
             </div>
         </div>

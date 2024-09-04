@@ -76,3 +76,12 @@ swiper-slide img {
     height: 450px;
     object-fit: cover;
 }
+
+.holidays-bg {
+    min-height: 80vh;
+    background: linear-gradient(rgba(49, 82, 119, 0.493), rgba(0, 0, 0, 0.6)), url("https://media.nomadicmatt.com/2024/sydneythings1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+

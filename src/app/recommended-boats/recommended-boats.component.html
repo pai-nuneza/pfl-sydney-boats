@@ -1,9 +1,9 @@
 <div class="container mx-auto py-8">
-    <h2 class="text-center text-3xl font-bold mb-6">Our Recommended Boats</h2>
+    <h2 class="text-center text-2xl font-bold mb-2">Our Recommended Boats</h2>
     <div class="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
 
-    <swiper-container pagination="true" navigation="true" class="mySwiper px-10" slides-per-view="1" space-between="100"
-        breakpoints='{
+    <swiper-container autoplay-delay="2500" autoplay-disable-on-interaction="false" pagination="true" navigation="true"
+        class="mySwiper px-10 md:px-24 lg:px-32" slides-per-view="1" space-between="100" breakpoints='{
         "640": {
             "slidesPerView": 1,
             "spaceBetween": 10
@@ -18,7 +18,7 @@
         }
     }'>
 
-        <swiper-slide *ngFor="let boat of recommendedBoats">
+        <swiper-slide class="pb-12" *ngFor="let boat of recommendedBoats">
             <div class="grid grid-cols-1">
                 <div class="bg-white  shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-200 cursor-pointer"
                     routerLinkActive="active-link">

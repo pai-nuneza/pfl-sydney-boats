@@ -1,27 +1,44 @@
 [
   {
     "title": "Wedding",
+    "description": "Celebrate your big day in style aboard a luxurious yacht with breathtaking views of Sydney Harbour.",
     "image": "https://media.istockphoto.com/id/912920224/photo/just-married-couple-on-yacht-happy-bride-and-groom-on-their-wedding-day.jpg?s=612x612&w=0&k=20&c=2Z4O57Wi1HH1Jhg5X11L3nkVP2HXzovG3atkQGysQLo=",
     "link": "/boats/wedding"
   },
   {
     "title": "Private Party",
+    "description": "Host an unforgettable private party with friends and family while cruising through Sydney’s waters.",
     "image": "https://dubriani.com/wp-content/uploads/2020/08/Yacht-Solandge-Party-Time.jpeg",
     "link": "/boats/party"
   },
   {
     "title": "Birthday Party",
-    "image": "https://dubaiboatcatering.com/wp-content/uploads/2023/06/Finger-Food-6-scaled.jpg",
+    "description": "Celebrate your special day on a luxury yacht with stunning views and fun activities on board.",
+    "image": "https://xclusiveyachts.com/photo/blog/10/webp/720/3.webp",
     "link": "/boats/party"
   },
   {
-    "title": "Corporate Party",
-    "image": "https://media.licdn.com/dms/image/D4D12AQHppglJrTuz-g/article-cover_image-shrink_720_1280/0/1685971021689?e=2147483647&v=beta&t=48hkfSsIyL3TeUGPZ8zrS4-AQCXp-SYGUaEAZwcyu-s",
+    "title": "Wind and Dine",
+    "description": "Enjoy a luxurious dining experience on the water, with gourmet meals and stunning harbour views.",
+    "image": "https://yachtchartersnow.com/wp-content/uploads/2023/05/Private-dinner-party-charter-one-yachts-1024x768.webp",
     "link": "/boats/party"
   },
   {
     "title": "Gender Reveal",
-    "image": "https://pbs.twimg.com/media/FKG0kXxaUAMD11N.jpg",
+    "description": "Reveal the biggest surprise of your life with a memorable gender reveal party on a beautiful yacht.",
+    "image": "https://pbs.twimg.com/media/Fp9gQreXoAAuvYk.jpg",
     "link": "/boats/party"
+  },
+  {
+    "title": "Sailing Adventure",
+    "description": "Set sail on an exhilarating adventure around Sydney Harbour, perfect for sailing enthusiasts.",
+    "image": "https://eastcoastsailing.com.au/wp-content/uploads/2021/08/Margaret-Rintoul-V-Yacht-Featured-Image.jpg",
+    "link": "/boats/Sailing"
+  },
+  {
+    "title": "Bachelor/Bachelorette Party",
+    "description": "Celebrate your last days of singlehood with an epic bachelor or bachelorette party on a luxury yacht.",
+    "image": "https://www.timelessyachtcharters.com/_lib/imgs/occasions/21/64c03e92-08d0-4041-a86c-afdc7b18975c.jpg",
+    "link": "/boats/Sailing"
   }
 ]

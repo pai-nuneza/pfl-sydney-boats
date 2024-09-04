@@ -1,22 +1,37 @@
 [
   {
     "imageUrl": "https://www.ucruisesydney.com.au/static/e74d1d2b2fa96ca5e642689f5a1e689b/dac54/boxing-day-cruise-bg.jpg",
-    "title": "Boxing Day"
+    "title": "Boxing Day",
+    "link": "/boats/Luxury"
   },
   {
     "imageUrl": "https://www.vividsydney.com/sites/default/files/inline-images/SydneyHarbourBridge.jpg",
-    "title": "Vivid Sydney"
+    "title": "Vivid Sydney",
+    "link": "/boats/Luxury"
   },
   {
     "imageUrl": "https://ipa.org.au/wp-content/uploads/2023/01/23012023-Australia-day2023.jpg",
-    "title": "Australia Day"
+    "title": "Australia Day",
+    "link": "/boats/Luxury"
   },
   {
     "imageUrl": "https://www.dubaiyachts.com/wp-content/uploads/2023/12/Newyear-Party-Main-1024x675.png",
-    "title": "New Year's Eve"
+    "title": "New Year's Eve",
+    "link": "/boats/Luxury"
   },
   {
     "imageUrl": "https://canvasyachtcharters.com/wp-content/uploads/2024/05/christmas-yacht-vacation.png",
-    "title": "Christmas Day"
+    "title": "Christmas Day",
+    "link": "/boats/Luxury"
+  },
+  {
+    "imageUrl": "https://arzlzikoyr.cloudimg.io/sebastus.com/wp-content/uploads/2022/06/shutterstock_1755422147.jpg?func=bound&w=1024&h=1024",
+    "title": "Labour Day",
+    "link": "/boats/Luxury"
+  },
+  {
+    "imageUrl": "https://www.asta-yachting.hr/documents/asta_blog_entertaining_kids_on_board.jpg",
+    "title": "Easter Holiday",
+    "link": "/boats/Luxury"
   }
 ]
