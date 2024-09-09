@@ -1,9 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import {
+  ActivatedRoute,
+  NavigationEnd,
+  Router,
+  RouterModule,
+} from '@angular/router';
 import boatsData from '../../assets/data/boats.json';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Boat } from '../../models/boat';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-boats',
@@ -33,7 +39,11 @@ export class BoatsComponent {
     catering: [],
   };
 
-  constructor(private fb: FormBuilder, private route: ActivatedRoute) {
+  constructor(
+    private fb: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
     this.filterForm = this.fb.group({
       search: [''],
       guests: [[]],
@@ -49,6 +59,12 @@ export class BoatsComponent {
   }
 
   ngOnInit(): void {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0); // Scrolls to top of the page
+      });
+
     this.route.paramMap.subscribe((params) => {
       this.boatType = params.get('type')!;
       if (this.boatType) {

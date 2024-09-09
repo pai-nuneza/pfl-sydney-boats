@@ -17,4 +17,3 @@ export const routes: Routes = [
   { path: 'product/:id', component: ProductComponent },
   { path: '**', redirectTo: '/home' },
 ];
-
