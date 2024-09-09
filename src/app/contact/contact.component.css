@@ -5,6 +5,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-position: center 38%;
 }
 
 /* Add a pseudo-element for the dark overlay */
