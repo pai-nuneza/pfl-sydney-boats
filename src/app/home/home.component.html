@@ -1,47 +1,56 @@
-<div class="background-image-container flex justify-center">
-    <div class="container text-center flex flex-col pt-32">
-        <h1 class="font-bold text-white text-4xl sm:text-5xl md:text-6xl pb-2">
+<div class="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center justify-center" 
+     style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1920&h=1080&fit=crop');">
+    <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24 lg:py-32">
+        <h1 class="font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl pb-2 sm:pb-4 leading-tight animate-fade-in">
             Harbour Fleet | Boats & Yachts
         </h1>
-        <h2 class="text-sky-200 text-base sm:text-lg md:text-xl pb-4 ">
+        <h2 class="text-sky-200 text-base sm:text-lg md:text-xl lg:text-2xl pb-4 sm:pb-6 animate-slide-up">
             Premium Yacht Rentals Just for You
         </h2>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8">
+            <button [routerLink]="['/boats']" 
+                class="bg-[#2F80ED] hover:bg-blue-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+                Explore Our Fleet
+            </button>
+            <button [routerLink]="['/contact']" 
+                class="bg-white text-[#2F80ED] hover:bg-gray-100 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-lg border-2 border-white">
+                Request a Quote
+            </button>
+        </div>
     </div>
 </div>
 
 
-<section class="text-gray-600 body-font">
-    <div class="py-10 mx-auto bg-gray-200">
-        <div class="grid grid-cols-1 place-items-center text-center md:block">
-            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Just for you</h2>
-            <h1 class="text-3xl font-extrabold text-gray-900">Events & Occasions</h1>
+<section class="text-gray-600 body-font bg-gradient-to-br from-white via-blue-50/30 to-white">
+    <div class="py-10 sm:py-14 md:py-16 mx-auto">
+        <div class="grid grid-cols-1 place-items-center text-center px-4 fade-in-up">
+            <h2 class="text-xs sm:text-sm text-[#2F80ED] tracking-widest font-bold title-font mb-1 uppercase">Just for you</h2>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1F2D3D] mb-2">Events & Occasions</h1>
+            <p class="text-gray-600 max-w-2xl text-sm sm:text-base font-medium">Make your special moments unforgettable on Sydney Harbour</p>
         </div>
-        <swiper-container pagination="true" class="container mySwiper " slides-per-view="1" breakpoints='{
+        <swiper-container pagination="true" class="container mySwiper mt-8 sm:mt-10 scale-in" slides-per-view="1" breakpoints='{
                 "640": {
                     "slidesPerView": 2,
                     "spaceBetween": 10 
                 },
                 "768": {
-                    "slidesPerView": 2,
-                    "spaceBetween": 5
+                    "slidesPerView": 3,
+                    "spaceBetween": 15
                 },
                 "1024": {
                     "slidesPerView": 4,
-                    "spaceBetween": 10
+                    "spaceBetween": 20
                 }
             }'>
-            <swiper-slide *ngFor="let event of events" class="flex justify-center py-10">
+            <swiper-slide *ngFor="let event of events" class="flex justify-center py-8 sm:py-10 px-2">
                 <a [routerLink]="[event.link]"
-                    class="relative block max-w-xs border border-solid border-gray-200 overflow-hidden transition-transform duration-300 ease-in-out">
+                .
+                    class="relative block w-full max-w-xs border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105">
                     <div class="relative">
-                        <img [src]="event.image" alt="Card image" class="block w-full shadow-md" />
-                        <div
-                            class="absolute inset-0 flex flex-col justify-between pt-14 bg-gradient-to-t from-black/75 to-transparent">
-                            <h1 class="text-2xl drop-shadow-lg font-semibold text-center text-white px-5 capitalize">{{
-                                event.title }}
-                            </h1>
-                            <h1 class="text-white capitalize px-5 mb-5 ">{{
-                                event.description }}</h1>
+                        <img [src]="event.image" [alt]="event.title" class="block w-full h-56 sm:h-64 object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                            <h1 class="text-xl sm:text-2xl drop-shadow-lg font-bold text-white capitalize mb-2">{{ event.title }}</h1>
+                            <p class="text-white text-sm sm:text-base opacity-90">{{ event.description }}</p>
                         </div>
                     </div>
                 </a>
@@ -49,8 +58,8 @@
         </swiper-container>
     </div>
 
-    <div class="container py-20 px-3 lg:px-24 mx-auto flex flex-wrap">
-        <h2 class="px-10 lg:text-4xl font-extrabold text-2xl text-gray-900 title-font mb-2 md:w-2/5">Harbour Fleet,
+    <div class="container py-20 px-3 lg:px-24 mx-auto flex flex-wrap bg-white/80 rounded-2xl shadow-sm border border-[#E1E7EF]">
+        <h2 class="px-10 lg:text-4xl font-extrabold text-2xl text-[#1F2D3D] title-font mb-2 md:w-2/5">Harbour Fleet,
             Sydney,<br> Started in 2021</h2>
         <div class="px-10 md:w-3/5 md:pl-6">
             <p class="leading-relaxed text-base">
@@ -112,47 +121,44 @@
     </div>
 </section>
 
-<section class="bg-gray-200 holidays-bg body-font">
-    <div class="container px-5 py-10 mx-auto">
-        <div class="flex flex-col text-center w-full mb-10">
-            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1 uppercase">Plan your trips
+<section class="bg-[#F5F7FA] holidays-bg body-font border-y border-[#E1E7EF]">
+    <div class="container px-4 sm:px-5 py-10 sm:py-14 md:py-16 mx-auto">
+        <div class="flex flex-col text-center w-full mb-8 sm:mb-10 fade-in-up">
+            <h2 class="text-xs sm:text-sm text-[#2F80ED] tracking-widest font-bold title-font mb-1 uppercase">Plan your trips
             </h2>
-            <h1 class="text-3xl font-extrabold text-gray-900">Holiday Celebrations</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#1F2D3D] mb-2">Holiday Celebrations</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base font-medium">Experience unforgettable moments on the water</p>
         </div>
-        <swiper-container autoplay-delay="2000" pagination="true" class="mySwiper" slides-per-view="1"
+        <swiper-container autoplay-delay="3000" pagination="true" class="mySwiper scale-in" slides-per-view="1"
             space-between="10" breakpoints='{
             "640": {
                 "slidesPerView": 2,
-                "spaceBetween": 10
+                "spaceBetween": 15
             },
             "768": {
                 "slidesPerView": 3,
-                "spaceBetween": 10
+                "spaceBetween": 15
             },
             "1024": {
                 "slidesPerView": 5,
-                "spaceBetween": 30
+                "spaceBetween": 20
             }
         }'>
-            <swiper-slide *ngFor="let holiday of holidays; let i = index" class="flex justify-center pb-12">
-                <!-- This should link or filtered by events in boats component -->
+            <swiper-slide *ngFor="let holiday of holidays; let i = index" class="flex justify-center pb-12 px-2">
                 <a [routerLink]="[holiday.link]"
-                    class="relative block  max-w-xs overflow-hidden transition-transform duration-300 ease-in-out">
-                    <div class="relative max-w-xs border border-gray-400 overflow-hidden transition-all duration-500">
-                        <div class="relative ">
-                            <img [src]="holiday.imageUrl" alt="Holiday image" class="block w-full" />
-                            <div class="absolute inset-0 flex  text-centeritems-top pt-5 pl-5 bg-black bg-opacity-25">
-                                <h1 class="text-xl font-semibold text-white  capitalize">{{ holiday.title }}
-                                </h1>
-                            </div>
+                    class="relative block w-full max-w-xs rounded-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 group">
+                    <div class="relative">
+                        <img [src]="holiday.imageUrl" [alt]="holiday.title" class="block w-full h-48 sm:h-56 object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex items-end p-4">
+                            <h1 class="text-lg sm:text-xl font-bold text-white capitalize group-hover:text-yellow-400 transition-colors">{{ holiday.title }}</h1>
                         </div>
                     </div>
                 </a>
             </swiper-slide>
         </swiper-container>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-6 sm:mt-8">
             <a [routerLink]="'/boats'"
-                class="px-6 py-3 bg-blue-500 text-white font-bold rounded hover:bg-blue-600 transition">
+                class="px-6 sm:px-8 py-3 sm:py-4 bg-[#2F80ED] hover:bg-blue-600 text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base">
                 Find the Perfect Boat for Your Dream Holiday
             </a>
         </div>
@@ -160,68 +166,93 @@
 </section>
 
 
-<section class="text-gray-600 body-font">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap">
-                <div class="w-full md:w-1/3 relative">
-                    <!-- The single image with responsive width and height -->
-                    <div class="relative">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/3b/95/61/photo2jpg.jpg?w=500&h=500&s=1"
-                            alt="Sydney City" class="w-full h-auto max-w-xs md:max-w-sm  shadow-md mx-auto">
+<section class="text-gray-600 body-font bg-white border-y border-[#E1E7EF]">
+    <div class="container mx-auto px-4 sm:px-5 lg:px-8 py-12 sm:py-16 md:py-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="w-full md:w-1/3 fade-in-left">
+                    <div class="relative rounded-lg overflow-hidden shadow-lg border border-[#E1E7EF]">
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&h=600&fit=crop"
+                            alt="Sydney Harbour" class="w-full h-auto object-cover">
                     </div>
                 </div>
 
                 <!-- Text and List Column -->
-                <div class="w-full md:w-2/3 pl-0 md:pl-6 mt-6 md:mt-0">
+                <div class="w-full md:w-2/3 fade-in-right">
                     <div class="mb-6">
-                        <h2 class="text-lg text-indigo-500 font-medium uppercase tracking-widest">Why choose us</h2>
-                        <h1 class="text-3xl font-bold text-gray-900 mt-1">Sydney's No. 1 Boat Rentals</h1>
+                        <h2 class="text-sm sm:text-base text-[#2F80ED] font-bold uppercase tracking-widest mb-2">Why choose us</h2>
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F2D3D] mb-3">Sydney's No. 1 Boat Rentals</h1>
+                        <p class="text-gray-600 text-sm sm:text-base">Trusted by thousands of customers for over 20 years</p>
                     </div>
 
-                    <!-- Features List -->rating
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base mb-6">
-                        <p><span class="text-green-500 mr-2">✔</span>Over 140 Safety Certified Vessels</p>
-                        <p><span class="text-green-500 mr-2">✔</span>1 Hour Response</p>
-                        <p><span class="text-green-500 mr-2">✔</span>20 Years in Business</p>
-                        <p><span class="text-green-500 mr-2">✔</span>Open 7 Days</p>
-                        <p><span class="text-green-500 mr-2">✔</span>Best Deal Negotiation</p>
-                        <p><span class="text-green-500 mr-2">✔</span>Over 1200 Online Reviews</p>
-                        <p><span class="text-green-500 mr-2">✔</span>Over 50,000 Happy Clients</p>
-                        <p><span class="text-green-500 mr-2">✔</span>Virtual Boat Tour Available for Some Boats</p>
+                    <!-- Features List -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-sm sm:text-base mb-6 stagger-children">
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">Over 140 Safety Certified Vessels</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">1 Hour Response</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">25 Years in Business</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">Open 7 Days</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">Best Deal Negotiation</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">Over 1200 Online Reviews</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">Over 50,000 Happy Clients</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg border border-[#E1E7EF]">
+                            <span class="text-[#2F80ED] text-xl flex-shrink-0">✔</span>
+                            <span class="text-gray-700 font-medium">Virtual Boat Tours Available</span>
+                        </div>
                     </div>
 
                     <!-- Rating Icons -->
-                    <div class="flex items-center">
-                        <img width="20"
-                            src="https://banner2.cleanpng.com/20201008/rtv/transparent-google-suite-icon-google-icon-1713858301568.webp"
-                            alt="Google Review" class="mr-4 fixed-size">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1312/1312139.png" alt="Facebook Rating"
-                            class="mr-4 fixed-size">
-                        <img src="https://w7.pngwing.com/pngs/264/340/png-transparent-tripadvisor-thumbnail-review-platforms-logos-thumbnail.png"
-                            alt="TripAdvisor Badge" class="mr-4 fixed-size">
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <div class="flex items-center space-x-2 bg-white p-2 rounded-lg shadow-md">
+                            <img width="24" src="https://banner2.cleanpng.com/20201008/rtv/transparent-google-suite-icon-google-icon-1713858301568.webp"
+                                alt="Google Review" class="h-6 w-6">
+                            <span class="text-sm font-semibold text-gray-700">4.9/5</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white p-2 rounded-lg shadow-md">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1312/1312139.png" alt="Facebook Rating"
+                                class="h-6 w-6">
+                            <span class="text-sm font-semibold text-gray-700">4.8/5</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-white p-2 rounded-lg shadow-md">
+                            <img src="https://w7.pngwing.com/pngs/264/340/png-transparent-tripadvisor-thumbnail-review-platforms-logos-thumbnail.png"
+                                alt="TripAdvisor Badge" class="h-6 w-6">
+                            <span class="text-sm font-semibold text-gray-700">Excellent</span>
+                        </div>
                     </div>
-
-                    <style>
-                        .fixed-size {
-                            width: 40px;
-                            height: 40px;
-                        }
-                    </style>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="text-gray-600 body-font bg-gray-200 py-14">
-    <div class="container mx-auto">
+<section class="text-gray-600 body-font bg-gradient-to-r from-gray-50 via-[#F5F7FA] to-gray-50 py-14 border-y border-[#E1E7EF]">
+    <div class="container mx-auto fade-in-up">
         <div class="text-center mb-12">
-            <h2 class="text-2xl font-extrabold text-gray-900 uppercase tracking-wide">Recommended by Industry</h2>
-            <p class="text-gray-500 text-lg mt-2">Trusted by leading organizations and travel industries</p>
+            <h2 class="text-2xl font-extrabold text-[#1F2D3D] uppercase tracking-wide">Recommended by Industry</h2>
+            <p class="text-gray-600 text-lg mt-2 font-medium">Trusted by leading organizations and travel industries</p>
         </div>
         <div class="flex justify-center pb-2">
-            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-center">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-center scale-in">
                 <!-- Logo 1 -->
                 <div class="flex justify-center transform hover:scale-105 transition-transform duration-300">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSbWPL-aGgkS8Zul-SmUeQvr4L9Pi4vYQKA&s"
@@ -245,4 +276,9 @@
             </div>
         </div>
     </div>
+</section>
+
+<!-- Recommended Boats Section -->
+<section class="text-gray-600 body-font py-14 bg-white fade-in-up">
+    <app-recommended-boats></app-recommended-boats>
 </section>

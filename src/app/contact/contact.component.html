@@ -14,62 +14,134 @@
 
         <!-- Form Section -->
         <div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input type="text" placeholder="First Name *"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <input type="text" placeholder="Last Name *"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <!-- Success Message -->
+            <div *ngIf="showSuccessMessage" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                <p class="font-bold">Success!</p>
+                <p>Your enquiry has been submitted. We'll contact you within 15 minutes!</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input type="email" placeholder="Email *"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <input type="tel" placeholder="Mobile *"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <input type="text" formControlName="firstName" placeholder="First Name *"
+                            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                            [class.border-red-500]="submitted && f['firstName'].errors">
+                        <p *ngIf="submitted && f['firstName'].errors" class="text-red-500 text-xs mt-1">
+                            First name is required
+                        </p>
+                    </div>
+                    <div>
+                        <input type="text" formControlName="lastName" placeholder="Last Name *"
+                            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                            [class.border-red-500]="submitted && f['lastName'].errors">
+                        <p *ngIf="submitted && f['lastName'].errors" class="text-red-500 text-xs mt-1">
+                            Last name is required
+                        </p>
+                    </div>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <select
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option>Event Occasion</option>
-                </select>
-                <input type="text" placeholder="Preferred Boat(s)"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <input type="email" formControlName="email" placeholder="Email *"
+                            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                            [class.border-red-500]="submitted && f['email'].errors">
+                        <p *ngIf="submitted && f['email'].errors?.['required']" class="text-red-500 text-xs mt-1">
+                            Email is required
+                        </p>
+                        <p *ngIf="submitted && f['email'].errors?.['email']" class="text-red-500 text-xs mt-1">
+                            Please enter a valid email
+                        </p>
+                    </div>
+                    <div>
+                        <input type="tel" formControlName="mobile" placeholder="Mobile (10+ digits) *"
+                            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                            [class.border-red-500]="submitted && f['mobile'].errors">
+                        <p *ngIf="submitted && f['mobile'].errors?.['required']" class="text-red-500 text-xs mt-1">
+                            Mobile is required
+                        </p>
+                        <p *ngIf="submitted && f['mobile'].errors?.['pattern']" class="text-red-500 text-xs mt-1">
+                            Please enter at least 10 digits
+                        </p>
+                    </div>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input type="date" placeholder="Charter Date (Approx) *"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <input type="text" placeholder="Preferred Time"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <select formControlName="eventOccasion"
+                            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                            [class.border-red-500]="submitted && f['eventOccasion'].errors">
+                            <option value="">Event Occasion *</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="private">Private Party</option>
+                            <option value="christmas">Christmas</option>
+                            <option value="newyear">New Year's Eve</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <p *ngIf="submitted && f['eventOccasion'].errors" class="text-red-500 text-xs mt-1">
+                            Please select an event occasion
+                        </p>
+                    </div>
+                    <input type="text" formControlName="preferredBoats" placeholder="Preferred Boat(s)"
+                        class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <select
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option>Catering Preferences</option>
-                </select>
-                <select
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option>Beverage Preferences</option>
-                </select>
-            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <input type="date" formControlName="charterDate"
+                            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                            [class.border-red-500]="submitted && f['charterDate'].errors">
+                        <p *ngIf="submitted && f['charterDate'].errors" class="text-red-500 text-xs mt-1">
+                            Charter date is required
+                        </p>
+                    </div>
+                    <input type="text" formControlName="preferredTime" placeholder="Preferred Time"
+                        class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input type="text" placeholder="Estimated Guests"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <input type="text" placeholder="Approx Budget"
-                    class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <select formControlName="cateringPreferences"
+                        class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Catering Preferences</option>
+                        <option value="byo">BYO</option>
+                        <option value="bbq">BBQ</option>
+                        <option value="full-catering">Full Catering</option>
+                        <option value="none">None</option>
+                    </select>
+                    <select formControlName="beveragePreferences"
+                        class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Beverage Preferences</option>
+                        <option value="licensed-bar">Licensed Bar</option>
+                        <option value="byo-drinks">BYO Drinks</option>
+                        <option value="non-alcoholic">Non-Alcoholic Only</option>
+                    </select>
+                </div>
 
-            <textarea placeholder="Your comments, requirements or questions"
-                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"></textarea>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <input type="number" formControlName="estimatedGuests" placeholder="Estimated Guests *" min="1"
+                            class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                            [class.border-red-500]="submitted && f['estimatedGuests'].errors">
+                        <p *ngIf="submitted && f['estimatedGuests'].errors" class="text-red-500 text-xs mt-1">
+                            Please enter number of guests
+                        </p>
+                    </div>
+                    <input type="text" formControlName="approxBudget" placeholder="Approx Budget"
+                        class="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
 
-            <button
-                class="bg-blue-500 text-white font-semibold p-3 rounded-md w-full hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300">Submit</button>
+                <textarea formControlName="comments" placeholder="Your comments, requirements or questions" rows="4"
+                    class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"></textarea>
 
-            <p class="text-sm text-gray-600 mt-2">By submitting the enquiry, I agree with the <a href="#"
-                    class="text-blue-500 underline">Terms and Conditions</a>.</p>
+                <button type="submit"
+                    class="bg-blue-500 text-white font-semibold p-3 rounded-md w-full hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-colors duration-200">
+                    Submit Enquiry
+                </button>
+
+                <p class="text-sm text-gray-600 mt-2">By submitting the enquiry, I agree with the <a href="#"
+                        class="text-blue-500 underline">Terms and Conditions</a>.</p>
+            </form>
         </div>
 
         <!-- Information Section -->

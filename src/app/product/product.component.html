@@ -1,111 +1,217 @@
 <section class="background-image-container bg-gray-200">
     <div class="container mx-auto px-4 py-8">
-        <div class="flex flex-col lg:flex-row gap-8 p-5 bg-white">
+        <div class="flex flex-col lg:flex-row gap-8 p-5 bg-white shadow-lg rounded-lg">
             <div class="w-full lg:w-3/5">
                 <div class="mb-4">
-                    <img src="{{boat.imageUrl}}" alt="Boat Image" class="w-full h-96 object-cover shadow-md">
+                    <img src="{{boat.imageUrl}}" alt="Boat Image" class="w-full h-96 object-cover shadow-md rounded-lg">
                 </div>
                 <!-- Thumbnails (static for now, add real functionality later) -->
                 <div class="flex gap-2">
-                    <img src="{{boat.imageUrl}}" alt="Thumbnail 1" class="w-20 h-20 shadow-md object-cover">
-                    <img src="{{boat.imageUrl}}" alt="Thumbnail 2" class="w-20 h-20 shadow-md object-cover">
-                    <img src="{{boat.imageUrl}}" alt="Thumbnail 3" class="w-20 h-20 shadow-md object-cover">
-                    <img src="{{boat.imageUrl}}" alt="Thumbnail 4" class="w-20 h-20 shadow-md object-cover">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 1" class="w-20 h-20 shadow-md object-cover rounded cursor-pointer hover:opacity-75 transition">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 2" class="w-20 h-20 shadow-md object-cover rounded cursor-pointer hover:opacity-75 transition">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 3" class="w-20 h-20 shadow-md object-cover rounded cursor-pointer hover:opacity-75 transition">
+                    <img src="{{boat.imageUrl}}" alt="Thumbnail 4" class="w-20 h-20 shadow-md object-cover rounded cursor-pointer hover:opacity-75 transition">
                 </div>
             </div>
 
-            <div class="w-full lg:w-2/5 bg-blue-900 text-white p-6 self-start">
+            <div class="w-full lg:w-2/5 bg-blue-900 text-white p-6 self-start rounded-lg shadow-lg">
                 <h1 class="text-3xl font-bold mb-2">{{boat.name}}</h1>
                 <p class="text-lg mb-4">{{boat.shortDescription}}</p>
-                <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold py-2 px-4  mb-4">
-                    Enquire Now
+                
+                <!-- Boat Details -->
+                <div class="mb-4 space-y-2">
+                    <div class="flex justify-between border-b border-blue-700 pb-2">
+                        <span class="font-semibold">Price:</span>
+                        <span class="text-yellow-400 font-bold">${{boat.price}}/hr</span>
+                    </div>
+                    <div class="flex justify-between border-b border-blue-700 pb-2">
+                        <span class="font-semibold">Max Guests:</span>
+                        <span>{{boat.maxGuests}} people</span>
+                    </div>
+                    <div class="flex justify-between border-b border-blue-700 pb-2">
+                        <span class="font-semibold">Boat Type:</span>
+                        <span>{{boat.boatType}}</span>
+                    </div>
+                </div>
+
+                <button (click)="enquireNow()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold py-3 px-4 rounded-lg mb-4 transition-colors duration-200 shadow-md">
+                    <i class="fas fa-envelope mr-2"></i>Enquire Now
                 </button>
-                <button
-                    class="w-full bg-transparent border border-white hover:bg-white hover:text-blue-900 font-semibold py-2 px-4  mb-4">
-                    Save For Later
+                <button (click)="saveForLater()"
+                    class="w-full bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-4 rounded-lg mb-4 transition-colors duration-200">
+                    <i class="{{ isSaved() ? 'fas' : 'far' }} fa-heart mr-2"></i>{{ isSaved() ? 'Saved' : 'Save For Later' }}
                 </button>
                 <div class="flex items-center space-x-4 mb-4">
-                    <span>Share:</span>
-                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-envelope"></i></a>
-                    <a href="#" class="hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
+                    <span class="font-semibold">Share:</span>
+                    <button (click)="shareOnFacebook()" class="hover:text-yellow-400 transition-colors"><i class="fab fa-facebook-f"></i></button>
+                    <button (click)="shareOnTwitter()" class="hover:text-yellow-400 transition-colors"><i class="fab fa-twitter"></i></button>
+                    <button (click)="shareViaEmail()" class="hover:text-yellow-400 transition-colors"><i class="fas fa-envelope"></i></button>
+                    <button (click)="shareOnLinkedIn()" class="hover:text-yellow-400 transition-colors"><i class="fab fa-linkedin"></i></button>
                 </div>
             </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
             <!-- Left Column: Boat Details and Pricing Table -->
-            <div class="lg:col-span-2 bg-white p-6 shadow-md self-start">
-                <h2 class="text-2xl font-bold mb-4">{{boat.name}}</h2>
-                <p class="text-gray-700 mb-4">{{boat.longDescription}}</p>
+            <div class="lg:col-span-2 bg-white p-6 shadow-lg rounded-lg self-start">
+                <h2 class="text-2xl font-bold mb-4 text-gray-900">About {{boat.name}}</h2>
+                <p class="text-gray-700 mb-6 leading-relaxed">{{boat.longDescription}}</p>
 
-                <div class="mt-8">
-                    <h3 class="text-lg font-bold mb-4 bg-sky-200 px-4 py-2">Pricing</h3>
-
-                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
-                        <div class="bg-gray-100 font-semibold p-2">Jan - Feb</div>
-                        <div class="bg-white p-2">$720 Per Hour</div>
-
-                        <div class="bg-gray-100 font-semibold p-2">Mar - Oct</div>
-                        <div class="bg-white p-2">
-                            $620 Per Hour (4 Hour Charter)<br>
-                            $2480 3 Hour Charter<br>
-                            $1860 2 Hour Charter<br>
-                            $1400 (Subject To Approval)
+                <!-- Features Section -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Features & Amenities</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div *ngFor="let feature of boat.features" class="flex items-center space-x-2 bg-blue-50 p-3 rounded-lg">
+                            <svg class="h-5 w-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700 font-medium">{{ feature }}</span>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="bg-gray-100 font-semibold p-2">Nov - Dec</div>
-                        <div class="bg-white p-2">$790 Per Hour</div>
+                <!-- Catering Options -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Catering Options</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div *ngFor="let option of boat.catering" class="flex items-center space-x-2 bg-green-50 p-3 rounded-lg">
+                            <svg class="h-5 w-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700 font-medium">{{ option }}</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="mt-8">
-                    <div class="bg-sky-200 p-2 font-bold text-lg">BYO Charters</div>
-                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
-                        <div class="bg-white p-2">Includes crockery, utensils, cutlery, glasses</div>
-                        <div class="bg-white p-2">Yes</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Pricing Information</h3>
+                    <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-700 font-semibold">Standard Rate:</span>
+                            <span class="text-2xl font-bold text-blue-600">${{boat.price}}/hour</span>
+                        </div>
+                        <p class="text-sm text-gray-600">*Minimum 4-hour charter required</p>
+                    </div>
+
+                    <div class="overflow-hidden rounded-lg border border-gray-200">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Season</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Jan - Feb (Peak Summer)</td>
+                                    <td class="px-4 py-3 text-sm font-semibold text-gray-900">$720/hour</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Mar - Oct (Off-Peak)</td>
+                                    <td class="px-4 py-3 text-sm font-semibold text-gray-900">$620/hour (4hr min)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 text-sm text-gray-700">Nov - Dec (Summer)</td>
+                                    <td class="px-4 py-3 text-sm font-semibold text-gray-900">$790/hour</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
+                <!-- Additional Fees Section -->
                 <div class="mt-8">
-                    <div class="bg-sky-200 p-2 font-bold text-lg">Wharf Fees</div>
-                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
-                        <div class="bg-white p-2">Pick up and drop off wharf fees apply. Check your quote and contract
-                            for more info.</div>
-                        <div class="bg-white p-2">Usually $100 Total</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Additional Information</h3>
+                    
+                    <!-- BYO Charters -->
+                    <div class="bg-white border border-gray-200 rounded-lg mb-4 overflow-hidden">
+                        <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-3">
+                            <h4 class="font-bold text-white">BYO Charters</h4>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Includes crockery, utensils, cutlery, glasses</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">✓ Included</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wharf Fees -->
+                    <div class="bg-white border border-gray-200 rounded-lg mb-4 overflow-hidden">
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-3">
+                            <h4 class="font-bold text-white">Wharf Fees</h4>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-700">Pick up and drop off wharf fees</span>
+                                <span class="text-lg font-bold text-gray-900">~$100</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">*Check your quote for exact pricing</p>
+                        </div>
+                    </div>
+
+                    <!-- Staff Fees -->
+                    <div class="bg-white border border-gray-200 rounded-lg mb-4 overflow-hidden">
+                        <div class="bg-gradient-to-r from-orange-500 to-orange-600 p-3">
+                            <h4 class="font-bold text-white">Staff Fees (Optional)</h4>
+                        </div>
+                        <div class="p-4 space-y-3">
+                            <div class="flex items-center justify-between pb-3 border-b border-gray-200">
+                                <div>
+                                    <span class="text-gray-700 font-medium">Wait Staff</span>
+                                    <p class="text-sm text-gray-500">1 per 10-15 guests</p>
+                                </div>
+                                <span class="text-lg font-bold text-gray-900">$300/4hrs</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-gray-700 font-medium">Chef</span>
+                                    <p class="text-sm text-gray-500">Professional catering</p>
+                                </div>
+                                <span class="text-lg font-bold text-gray-900">$380/4hrs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Events -->
+                    <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="bg-gradient-to-r from-red-500 to-red-600 p-3">
+                            <h4 class="font-bold text-white">Special Event Rates</h4>
+                        </div>
+                        <div class="p-4 space-y-3">
+                            <div class="flex items-center justify-between pb-3 border-b border-gray-200">
+                                <span class="text-gray-700 font-medium">New Year's Eve (7hrs)</span>
+                                <span class="text-lg font-bold text-red-600">$12,600</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-700 font-medium">Boxing Day</span>
+                                <span class="text-lg font-bold text-red-600">$700/hour</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Customer Reviews Section -->
                 <div class="mt-8">
-                    <div class="bg-sky-200 p-2 font-bold text-lg">Staff Fees</div>
-                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
-                        <div class="bg-white p-2">1 Wait Staff Required Per 10-15 Guests</div>
-                        <div class="bg-white p-2">$300 Per Wait Staff For A 4 Hour Charter.
-                            Additional Hours $50 per waitstaff per hour</div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
-                        <div class="bg-white p-2">1 Chef</div>
-                        <div class="bg-white p-2">$380 Per Chef For 4 Hour Charter. Additional Hours $80 Per Chef Per
-                            Hour</div>
-                    </div>
-                </div>
-
-                <div class="mt-8">
-                    <div class="bg-sky-200 p-2 font-bold text-lg">Other Fees & Special Day Rates</div>
-                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
-                        <div class="bg-white p-2">NYE - 7 hrs (all inclusive) upt o 9 guests</div>
-                        <div class="bg-white p-2">$12,600</div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-px bg-gray-200 border-b border-gray-300">
-                        <div class="bg-white p-2">Boxing Day</div>
-                        <div class="bg-white p-2">$700 Per Hour</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Customer Reviews</h3>
+                    <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-500 text-2xl">
+                                ⭐⭐⭐⭐⭐
+                            </div>
+                            <span class="ml-3 text-2xl font-bold text-gray-900">4.9/5</span>
+                            <span class="ml-2 text-gray-600">(127 reviews)</span>
+                        </div>
+                        <p class="text-gray-700 italic">"Excellent service and beautiful boat! Our wedding party had an amazing time on Sydney Harbour."</p>
+                        <p class="text-sm text-gray-600 mt-2">- Sarah M., Wedding Event</p>
                     </div>
                 </div>
 
                 <div class="mt-14">
-                    <div class="bg-sky-200 p-2 font-bold text-lg">Amenities</div>
-                    <div class="grid grid-cols-2 gap-4 px-4 mt-4">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-t-lg">
+                        <h3 class="font-bold text-lg text-white">All Amenities</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 px-4 py-6 bg-white rounded-b-lg border border-t-0 border-gray-200">
                         <!-- Wi-Fi -->
                         <div class="flex items-center">
                             <i class="fas fa-wifi text-sky-600"></i>
@@ -190,161 +296,218 @@
                 </div>
             </div>
 
-            <!-- Right Column: Additional Details -->
+            <!-- Right Column: Booking Summary & Additional Details -->
             <div class="lg:col-span-1">
-                <div class="bg-white p-6 shadow-md self-start">
-                    <ul>
-                        <li class="flex justify-between items-center">
-                            <span>Max Guests</span>
-                            <span class="font-bold">60</span>
+                <div class="bg-white shadow-lg rounded-lg sticky top-4 z-10" style="max-height: calc(100vh - 2rem); overflow-y: auto;">
+                    <div class="sticky top-0 bg-white p-6 pb-4 border-b border-gray-200 rounded-t-lg z-20">
+                        <h3 class="text-xl font-bold text-gray-900">Quick Info</h3>
+                    </div>
+                    <div class="p-6 pt-4">
+                        <ul class="space-y-3">
+                        <li class="flex justify-between items-center pb-3 border-b border-gray-200">
+                            <span class="text-gray-600">Max Guests</span>
+                            <span class="font-bold text-gray-900 text-lg">{{ boat.maxGuests }}</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-3 border-b border-gray-200">
+                            <span class="text-gray-600">Price from</span>
+                            <span class="font-bold text-blue-600 text-lg">${{ boat.price }}/hr</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-3 border-b border-gray-200">
+                            <span class="text-gray-600">Boat Type</span>
+                            <span class="font-bold text-gray-900">{{ boat.boatType }}</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-3 border-b border-gray-200">
+                            <span class="text-gray-600">Min. hours</span>
+                            <span class="font-bold text-gray-900">4 hrs</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-3 border-b border-gray-200">
+                            <span class="text-gray-600">BYO Allowed</span>
+                            <span class="font-bold text-green-600 flex items-center">
+                                <svg class="h-5 w-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Yes
+                            </span>
                         </li>
                         <li class="flex justify-between items-center">
-                            <span>Price from</span>
-                            <span class="font-bold">$480/hr</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>Min. hours</span>
-                            <span class="font-bold">4 hrs</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>BYO</span>
-                            <span class="font-bold text-green-600">Yes</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>Captain</span>
-                            <span class="font-bold">Included</span>
-                        </li>
-                        <li class="flex justify-between items-center">
-                            <span>Casual buffet</span>
-                            <span class="font-bold">94</span>
+                            <span class="text-gray-600">Captain</span>
+                            <span class="font-bold text-green-600">✓ Included</span>
                         </li>
                     </ul>
+                    
+                    <button (click)="requestQuote()" 
+                        class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-200 shadow-md">
+                        <i class="fas fa-file-invoice mr-2"></i>Request a Quote
+                    </button>
+                    <button (click)="callNow()" 
+                        class="w-full mt-3 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-4 rounded-lg transition-colors duration-200">
+                        <i class="fas fa-phone mr-2"></i>Call: +61 2 9328 4748
+                    </button>
+                    </div>
                 </div>
 
                 <!-- Section: Why Book Online With Us -->
-                <div class="mt-8 p-6 bg-white">
-                    <div class="font-bold text-lg mb-4">Why Book Online With Us?</div>
+                <div class="mt-8 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg shadow-md">
+                    <div class="font-bold text-xl mb-6 text-gray-900">Why Book With Us?</div>
                     <div class="space-y-4">
-                        <div class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        <div class="flex items-start bg-white p-3 rounded-lg">
+                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7" />
                             </svg>
                             <div>
-                                <div class="font-semibold">Book now, with no online booking fee*</div>
-                                <div class="text-gray-500">Free consultation, free booking service</div>
+                                <div class="font-semibold text-gray-900">No Booking Fees</div>
+                                <div class="text-gray-600 text-sm">Free consultation & booking service</div>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        <div class="flex items-start bg-white p-3 rounded-lg">
+                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7" />
                             </svg>
                             <div>
-                                <div class="font-semibold">Free cancellation</div>
-                                <div class="text-gray-500">Cancel your booking anytime with no risks</div>
+                                <div class="font-semibold text-gray-900">Flexible Cancellation</div>
+                                <div class="text-gray-600 text-sm">Cancel anytime with no risks</div>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        <div class="flex items-start bg-white p-3 rounded-lg">
+                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7" />
                             </svg>
                             <div>
-                                <div class="font-semibold">Book now. Pay later</div>
-                                <div class="text-gray-500">Make your payment after you enjoy the cruise</div>
+                                <div class="font-semibold text-gray-900">Pay Later Option</div>
+                                <div class="text-gray-600 text-sm">Flexible payment terms available</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-white p-3 rounded-lg">
+                            <svg class="h-6 w-6 text-green-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            <div>
+                                <div class="font-semibold text-gray-900">20+ Years Experience</div>
+                                <div class="text-gray-600 text-sm">Trusted by 50,000+ customers</div>
                             </div>
                         </div>
                     </div>
-                    <hr class="my-6 border-gray-200">
-                    <div class="font-bold text-center">Payment Methods</div>
-                    <div class="flex justify-center mt-4 space-x-4">
-                        <!-- Add your payment method icons here -->
-                        <img src="https://w7.pngwing.com/pngs/385/197/png-transparent-visa-flat-brand-logo-icon-thumbnail.png"
-                            alt="Visa" class="h-8">
-                        <img src="https://w7.pngwing.com/pngs/648/903/png-transparent-mastercard-logo-logo-payment-visa-mastercard-paypal-mastercard-icon-text-service-mobile-payment-thumbnail.png"
-                            alt="MasterCard" class="h-8">
-                        <img src="https://w7.pngwing.com/pngs/442/324/png-transparent-american-express-icon.png"
-                            alt="American Express" class="h-8">
-                        <img src="https://w7.pngwing.com/pngs/883/716/png-transparent-afterpay-logo-thumbnail-tech-companies-thumbnail.png"
-                            alt="Afterpay" class="h-8">
-                        <img src="https://w7.pngwing.com/pngs/405/876/png-transparent-wechat-mobile-payment-global-payments-service-%E5%BE%AE%E4%BF%A1-angle-leaf-logo-thumbnail.png"
-                            alt="WeChat Pay" class="h-8">
-                    </div>
-                </div>
-
-                <!-- Section: Brochure PDF -->
-                <div class="mt-8 p-6 bg-white">
-                    <div class="font-bold text-lg mb-4">Brochure Pdf</div>
-                    <div class="flex justify-center">
-                        <button
-                            class="flex items-center space-x-2 border border-blue-500 text-blue-500 py-2 px-4 rounded">
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4v16m8-8H4" />
-                            </svg>
-                            <span>Download</span>
-                        </button>
+                    <hr class="my-6 border-gray-300">
+                    <div class="font-bold text-center text-gray-900 mb-3">Secure Payment Methods</div>
+                    <div class="flex justify-center items-center flex-wrap gap-4 py-2">
+                        <div class="bg-white p-2 rounded border border-gray-200 hover:shadow-md transition">
+                            <i class="fab fa-cc-visa text-4xl text-blue-600"></i>
+                        </div>
+                        <div class="bg-white p-2 rounded border border-gray-200 hover:shadow-md transition">
+                            <i class="fab fa-cc-mastercard text-4xl text-red-600"></i>
+                        </div>
+                        <div class="bg-white p-2 rounded border border-gray-200 hover:shadow-md transition">
+                            <i class="fab fa-cc-amex text-4xl text-blue-800"></i>
+                        </div>
+                        <div class="bg-white p-2 rounded border border-gray-200 hover:shadow-md transition">
+                            <i class="fab fa-paypal text-4xl text-blue-500"></i>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Section: Recommended By Industry -->
-                <div class="mt-8 p-6 bg-white">
-                    <div class="font-bold text-lg mb-4">Recommended By Industry</div>
-                    <div class="flex justify-center space-x-6">
-                        <!-- Add your industry logos here -->
+                <!-- Section: Trust Badges -->
+                <div class="mt-8 p-6 bg-white rounded-lg shadow-md">
+                    <div class="font-bold text-lg mb-4 text-gray-900 text-center">Trusted & Certified</div>
+                    <div class="flex justify-center items-center flex-wrap gap-4">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQuIeWJHx4cTCaXYv_-8B2M_HwuV0FclYdQw&s"
-                            alt="Destination NSW" class="h-12">
+                            alt="Destination NSW" class="h-12 opacity-75 hover:opacity-100 transition">
                         <img src="https://w7.pngwing.com/pngs/913/38/png-transparent-tourism-australia-south-australia-travel-government-of-australia-travel-text-logo-organism.png"
-                            alt="Tourism Australia" class="h-12">
+                            alt="Tourism Australia" class="h-12 opacity-75 hover:opacity-100 transition">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpzyoxstTKzGVBa2Wex84fIWru3j2a8N5YgopvbEi5FFk0771MnDFLiwpYovG-qCkCDlU&usqp=CAU"
-                            alt="TripAdvisor" class="h-12">
+                            alt="TripAdvisor" class="h-12 opacity-75 hover:opacity-100 transition">
                     </div>
                 </div>
 
-                <!-- Enquire Button -->
-                <div class="fixed bottom-8 right-8">
-                    <button
-                        class="bg-yellow-400 text-white py-2 px-4 rounded-full shadow-lg flex items-center space-x-2">
-                        <span>Enquire</span>
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 12h14m-7-7l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Section: Star Captain -->
-                <div class="mt-8 p-6 bg-white text-center">
-                    <div class="font-bold text-lg mb-4">Star Captain</div>
-
-                    <div class="flex justify-center space-x-8">
-                        <!-- Captain 1 -->
-                        <div class="flex flex-col items-center">
-                            <img src="https://i0.wp.com/www.resilientworker.net/wp-content/uploads/2016/04/Captain.jpg"
-                                alt="Jack Hamilton" class="rounded-full h-32 w-32 object-cover mb-4">
-                            <div class="font-semibold text-lg">Jack Hamilton</div>
-                            <div class="text-gray-500">Meet our chief captain</div>
-                        </div>
-
-                        <!-- Captain 2 -->
-                        <div class="flex flex-col items-center">
-                            <img src="https://theseacadetmagazine.org/wp-content/uploads/2023/04/LAB_2756.jpg"
-                                alt="Second Captain" class="rounded-full h-32 w-32 object-cover mb-4">
-                            <div class="font-semibold text-lg">Second Captain</div>
-                            <div class="text-gray-500">Meet our deputy captain</div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Floating CTA Button -->
+                <a [routerLink]="['/contact']" 
+                    class="fixed bottom-8 right-8 z-50 bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-full shadow-2xl flex items-center space-x-2 transition-all duration-200 hover:scale-105">
+                    <span>Book Now</span>
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 12h14m-7-7l7 7-7 7" />
+                    </svg>
+                </a>
             </div>
         </div>
-    </div>s
+    </div>
 </section>
+
+<!-- Modal -->
+<div *ngIf="showModal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center justify-center p-4 animate-fadeIn">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full transform transition-all animate-slideUp">
+        <!-- Modal Header -->
+        <div class="relative px-6 py-5 border-b border-gray-200"
+            [ngClass]="{
+                'bg-gradient-to-r from-green-50 to-green-100': modalType === 'success',
+                'bg-gradient-to-r from-blue-50 to-blue-100': modalType === 'info' || modalType === 'loading'
+            }">
+            <div class="flex items-center space-x-3">
+                <!-- Icon -->
+                <div *ngIf="modalType === 'success'" class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div *ngIf="modalType === 'info'" class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div *ngIf="modalType === 'loading'" class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                        <svg class="animate-spin w-6 h-6 text-white" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Title -->
+                <h3 class="text-xl font-bold text-gray-900 flex-1">{{ modalTitle }}</h3>
+                <!-- Close Button -->
+                <button *ngIf="!isLoading" (click)="closeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="px-6 py-6">
+            <p class="text-gray-700 whitespace-pre-line leading-relaxed">{{ modalMessage }}</p>
+        </div>
+        
+        <!-- Modal Footer -->
+        <div class="px-6 py-4 bg-gray-50 rounded-b-2xl flex justify-end space-x-3" *ngIf="!isLoading">
+            <button (click)="closeModal()" 
+                class="px-6 py-2.5 bg-white border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-200">
+                Close
+            </button>
+            <button *ngIf="modalType === 'success' || modalType === 'info'" 
+                (click)="closeModal()"
+                class="px-6 py-2.5 font-semibold rounded-lg transition-colors duration-200"
+                [ngClass]="{
+                    'bg-green-500 hover:bg-green-600 text-white': modalType === 'success',
+                    'bg-blue-500 hover:bg-blue-600 text-white': modalType === 'info'
+                }">
+                OK
+            </button>
+        </div>
+    </div>
+</div>
 
 
 <app-recommended-boats></app-recommended-boats>

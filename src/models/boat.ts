@@ -7,6 +7,8 @@ export interface Boat {
   boatType: string;
   features: string[];
   catering: string[];
+  shortDescription: string;
+  longDescription: string;
   events: string[];
   recommended: boolean;
 }

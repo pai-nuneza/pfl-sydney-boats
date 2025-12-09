@@ -2,44 +2,44 @@
   {
     "title": "Wedding",
     "description": "Celebrate your big day on a luxury yacht in Sydney Harbour.",
-    "image": "https://images.stockcake.com/public/6/7/8/678d52bc-ddc7-4675-99f7-8c670c4bd96c_large/nautical-wedding-bliss-stockcake.jpg",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&q=80",
     "link": "/boats"
   },
 
   {
     "title": "Sailing Adventure",
     "description": "Set sail on an exciting Sydney Harbour adventure.",
-    "image": "https://images.stockcake.com/public/a/3/5/a3553830-756f-426d-9ba6-2c229c4d2c25_large/sailing-ocean-adventure-stockcake.jpg",
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&q=80",
     "link": "/boats/Sailing"
   },
   {
     "title": "Private Party",
-    "description": "Host an unforgettable party while cruising Sydney’s waters.",
-    "image": "assets/images/event-party.jpg",
+    "description": "Host an unforgettable party while cruising Sydney's waters.",
+    "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop&q=80",
     "link": "/boats/Power boats"
   },
   {
     "title": "Stag Party",
     "description": "Celebrate with an epic party on a luxury yacht.",
-    "image": "https://www.timelessyachtcharters.com/_lib/imgs/occasions/21/64c03e92-08d0-4041-a86c-afdc7b18975c.jpg",
+    "image": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&h=600&fit=crop&q=80",
     "link": "/boats/Power boats"
   },
   {
     "title": "Birthdays",
     "description": "Celebrate your birthday with fun and scenic views on a yacht.",
-    "image": "assets/images/event-birthday.jpg",
+    "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&h=600&fit=crop&q=80",
     "link": "/boats/Power boats"
   },
   {
     "title": "Wine and Dine",
     "description": "Enjoy gourmet dining with stunning harbour views.",
-    "image": "https://images.stockcake.com/public/c/6/2/c62c0a8a-ce5b-44e5-98ef-59cbc9b806a4_large/sunset-yacht-gathering-stockcake.jpg",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop&q=80",
     "link": "/boats/Luxury Yachts"
   },
   {
     "title": "Gender Reveal",
     "description": "Host a memorable gender reveal party on a yacht.",
-    "image": "https://images.stockcake.com/public/1/a/3/1a398c37-7f6d-4ee6-ac68-761bd7659ded_large/joyful-celebration-time-stockcake.jpg",
+    "image": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop&q=80",
     "link": "/boats/Power boats"
   }
 ]

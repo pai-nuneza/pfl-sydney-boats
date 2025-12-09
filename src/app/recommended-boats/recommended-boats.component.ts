@@ -2,11 +2,12 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import boatsData from '../../assets/data/boats.json';
 import { CommonModule } from '@angular/common';
 import { Boat } from '../../models/boat';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-recommended-boats',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './recommended-boats.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   styleUrl: './recommended-boats.component.scss',

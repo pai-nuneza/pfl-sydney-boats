@@ -4,5 +4,50 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+    background: #F5F7FA;
+    min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #E1E7EF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2F80ED;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1F67C9;
+}
+
+/* Glassmorphism utility class */
+.glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid #E1E7EF;
+}
+
+/* Modern card shadow */
+.card-shadow {
+    box-shadow: 0 10px 40px rgba(47, 128, 237, 0.1), 0 2px 8px rgba(47, 128, 237, 0.06);
+}
+
+/* Gradient text utility */
+.gradient-text {
+    background: linear-gradient(135deg, #2F80ED 0%, #1F2D3D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
